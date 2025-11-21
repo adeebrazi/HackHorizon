@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-color: rgb(21, 21, 135); */
+    background-image: url(270.jpg);
+    /* background-repeat: repeat-y; */
+    background-size:cover;
+}
+
+.navlink{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 280px;
+}
+
+.navlink li {
+    margin-right: 12px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.navbar{
+    /* background-color: blue; */
+    display: flex;
+    /* position: fixed; */
+}
+
+.ajulogo{
+    height: 50px;
+    width: 250px;
+    padding-left: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.hh-round{
+    height: 90px;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 470px;
+    border: 5px solid greenyellow;
+    border-radius: 55px;
+}
+
+.hh-normal{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    height: 400px;
+    width: 900px;
+}
+
+.container1{
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 540px;
+    width: auto;
+}
+
+.container1 h2{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -80px;
+    font-size: 30px;
+}
+
+.container1 h3{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.container2{
+    height: 590px;
+    width: auto;
+    margin-top: 150px;
+}
+.container2 h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* margin-top: 37px; */
+    font-size: 80px;
+}
+.container2 li{
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    font-size: 50px;
+}
+
