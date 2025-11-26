@@ -1,22 +1,45 @@
-/* --- 1. Global Reset & Body Styles --- */
+/* --- 0. Global Reset & Box Sizing --- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
 
+/* --- 1. Body and Background Styles --- */
 body{
-    background-color: #0d1117; 
-    background-image: url('270.jpg'); 
-    background-size: cover;
+    /* Background Grading based on 270.jpg Colors */
+    background-color: #030308; /* Fallback to near-black */
+    
+    background-image: 
+        /* Layer 1: Radial Glow (Vibrant Cobalt/Electric Blue) */
+        radial-gradient(circle at 75% 30%, 
+            rgba(0, 153, 255, 0.25) 0%,   /* Brightest Cyan-Blue Core */
+            rgba(0, 102, 255, 0.1) 20%,    /* Mid-Blue Glow */
+            transparent 60%
+        ),
+        
+        /* Layer 2: Radial Depth (Dark Indigo/Violet) */
+        radial-gradient(circle at 25% 90%, 
+            rgba(74, 20, 140, 0.3) 0%,    /* Dark Violet Core */
+            rgba(51, 0, 102, 0.1) 40%,    /* Mid-Violet Depth */
+            transparent 70%
+        ),
+        
+        /* Layer 3: Linear Depth (Deep Midnight Blue) */
+        linear-gradient(180deg, #0F1E42 0%, #060B23 80%);
+        
+    /* Standard Layout and Typography Settings */
+    background-repeat: no-repeat;
+    background-size: cover; 
     background-position: center;
     background-attachment: fixed; 
-    min-height: 100vh;
+    min-height: 100vh; 
+    
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e6edf3; 
 }
 
-/* --- 2. Navigation Bar (Header) --- */
+/* --- 2. Navigation Bar (Desktop/Tablet) --- */
 .navbar{
     display: flex;
     align-items: center;
@@ -51,7 +74,7 @@ body{
 
 .navlink{
     list-style: none;
-    display: flex; /* Display horizontal on desktop */
+    display: flex; 
     align-items: center;
     margin-left: auto; 
 }
@@ -73,7 +96,7 @@ body{
     text-shadow: 0 0 10px rgba(51, 170, 255, 0.7); 
 }
 
-/* --- Hamburger Menu Styling (Hidden by default on Desktop) --- */
+/* --- 3. Hamburger Menu Base Styles (Desktop Hidden) --- */
 .menu-toggle {
     display: none; /* Hidden on desktop */
     flex-direction: column;
@@ -95,12 +118,11 @@ body{
     transition: all 0.3s ease-in-out;
 }
 
-/* Active/Open state for the menu (toggled by JS) */
+/* JS Toggled Classes */
 .navlink.active {
     display: flex !important; 
 }
 
-/* Optional: Hamburger to 'X' animation */
 .menu-toggle.open .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
 }
@@ -113,7 +135,7 @@ body{
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* --- 3. Container 1: Hero Section --- */
+/* --- 4. Container 1: Hero Section --- */
 .container1{
     padding-top: 80px;
     padding-bottom: 100px;
@@ -146,7 +168,7 @@ body{
     margin-right: auto;
 }
 
-/* --- 4. Container 2: Sections & Highlights --- */
+/* --- 5. Container 2: Sections & Highlights --- */
 .container2{
     padding: 60px 20px;
     margin: 50px auto;
@@ -195,15 +217,9 @@ body{
     flex: 1 1 45%; 
     min-width: 300px; 
     text-align: left;
-    transition: background-color 0.3s ease, border-left-color 0.3s ease;
 }
 
-.container2 li:hover {
-    background-color: rgba(40, 55, 70, 0.7);
-    border-left-color: #33aaff; 
-}
-
-/* 5. Logo Sections Styling */
+/* 6. Logo Sections Styling */
 .container2.logo-section {
     text-align: center;
     display: flex;
@@ -234,45 +250,42 @@ body{
     opacity: 1;
 }
 
-
 /* ================================================= */
-/* 📱 1. MEDIA QUERY FOR MOBILE DEVICES (max-width: 768px) */
+/* 📱 MEDIA QUERY FIXES FOR MOBILE DEVICES (max-width: 768px) */
 /* ================================================= */
 @media (max-width: 768px) {
-    /* --- Navigation Bar Adjustments --- */
+    /* --- Navbar Fixes --- */
     .navbar {
         flex-wrap: nowrap; 
         justify-content: space-between; 
-        padding: 10px 20px;
-        position: relative; 
+        padding: 10px 10px; /* Reduced padding */
+        position: relative;
     }
 
     .ajulogo {
-        height: 40px;
-        order: 1; 
+        height: 35px; /* Smaller logo */
         margin-right: 5px;
+        width: auto;
     }
 
     .hh-round {
-        height: 50px;
-        width: 50px;
-        order: 2; 
+        height: 45px; /* Smaller logo */
+        width: 45px;
         margin-right: 0;
     }
     
-    /* Show Hamburger Icon */
     .menu-toggle {
         display: flex; 
         order: 3;
+        margin-left: 15px; /* Separate icon from logos */
     }
     
-    /* Hide Menu by Default and Set Dropdown Style */
     .navlink {
-        display: none; /* Crucial: Hides the menu */
+        display: none; /* Hide menu by default */
+        top: 65px; /* Align below the smaller navbar */
         flex-direction: column;
         background-color: rgba(13, 17, 23, 0.95);
         position: absolute;
-        top: 70px; 
         left: 0;
         width: 100%;
         padding: 10px 0;
@@ -290,64 +303,59 @@ body{
         padding: 10px 0;
     }
     
-    /* --- Hero Section Adjustments --- */
+    /* --- Hero Section Fixes --- */
+    .container1 {
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+    
     .container1 h2 {
-        font-size: 1.8em;
+        font-size: 1.7em; 
     }
 
     .container1 h3 {
-        font-size: 1em;
-        padding: 0 10px;
+        font-size: 0.9em; /* Reduced size for better wrapping */
+        line-height: 1.4;
     }
     
-    /* --- Content Section Adjustments --- */
+    /* --- Container and Highlights Fixes --- */
     .container2 {
-        margin: 30px 10px;
-        padding: 30px 10px;
+        max-width: 90%; /* Constrain width */
+        margin: 30px auto; 
+        padding: 20px 10px; 
     }
 
     .container2 h1 {
-        font-size: 2.5em;
+        font-size: 2em; 
     }
 
+    .container2 ul {
+        padding: 0;
+    }
+    
     .container2 li {
         font-size: 1.1em;
-        flex: 1 1 100%; /* Stack list items vertically */
+        flex: 1 1 100%; 
+        margin: 10px 0;
+        padding: 15px;
+        display: flex; 
+        align-items: center; 
     }
 
     .container2.logo-section img {
-        height: 50px; 
-        margin: 10px 15px;
+        height: 40px; 
+        margin: 10px 10px;
     }
 }
 
 /* ================================================= */
-/* 💻 2. MEDIA QUERY FOR TABLET DEVICES (769px to 1024px) */
+/* 💻 MEDIA QUERY FOR TABLET DEVICES (769px to 1024px) */
 /* ================================================= */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .navbar {
-        padding: 10px 20px;
-    }
-    
-    /* Hide hamburger icon on tablet and desktop */
-    .menu-toggle {
-        display: none;
-    }
-
-    .navlink li {
-        margin-left: 20px;
-    }
-
-    .container1 h2 {
-        font-size: 2.3em;
-    }
-
-    .container2 {
-        max-width: 95%; 
-    }
-    
-    .container2 li {
-        font-size: 1.4em;
-        flex: 1 1 45%; 
-    }
+    .navbar {padding: 10px 20px;}
+    .menu-toggle {display: none;}
+    .navlink li {margin-left: 20px;}
+    .container1 h2 {font-size: 2.3em;}
+    .container2 {max-width: 95%;}
+    .container2 li {font-size: 1.4em; flex: 1 1 45%;}
 }
