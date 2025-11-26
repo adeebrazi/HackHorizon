@@ -39,14 +39,14 @@ body{
     height: 70px;
     width: 70px;
     margin-right: 20px;
-    border: 3px solid #0400ff; 
+    border: 3px solid #ffffff; 
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .hh-round:hover {
-    transform: scale(1.05) rotate(5deg);
-    box-shadow: 0 0 15px #0400ff;
+    transform: scale(1.05) rotate(180deg);
+    box-shadow: 0 0 15px #ffffff;
 }
 
 .navlink{
@@ -90,7 +90,7 @@ body{
 .menu-toggle .bar {
     height: 3px;
     width: 100%;
-    background-color: #0400ff;
+    background-color: #ffffff;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
