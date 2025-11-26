@@ -1,102 +1,353 @@
+/* --- 1. Global Reset & Body Styles --- */
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box; 
 }
 
 body{
-    /* background-color: rgb(21, 21, 135); */
-    background-image: url(270.jpg);
-    /* background-repeat: repeat-y; */
-    background-size:cover;
+    background-color: #0d1117; 
+    background-image: url('270.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e6edf3; 
 }
 
-.navlink{
-    list-style: none;
+/* --- 2. Navigation Bar (Header) --- */
+.navbar{
     display: flex;
     align-items: center;
-    padding-left: 280px;
-}
-
-.navlink li {
-    margin-right: 12px;
-    color: white;
-    cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-
-.navbar{
-    /* background-color: blue; */
-    display: flex;
-    /* position: fixed; */
+    padding: 10px 40px;
+    background-color: rgba(13, 17, 23, 0.9); 
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .ajulogo{
     height: 50px;
-    width: 250px;
-    padding-left: 20px;
-    margin-top: 15px;
+    width: auto;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .hh-round{
-    height: 90px;
-    width: 90px;
-    margin-top: 5px;
-    margin-left: 470px;
-    border: 5px solid greenyellow;
-    border-radius: 55px;
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+    border: 3px solid #00ff99; 
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.hh-round:hover {
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 15px #00ff99;
+}
+
+.navlink{
+    list-style: none;
+    display: flex; /* Display horizontal on desktop */
+    align-items: center;
+    margin-left: auto; 
+}
+
+.navlink li {
+    margin-left: 30px; 
+}
+
+.navlink li a {
+    text-decoration: none;
+    color: #e6edf3;
+    font-size: 18px;
+    font-weight: 500; 
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navlink li a:hover {
+    color: #33aaff; 
+    text-shadow: 0 0 10px rgba(51, 170, 255, 0.7); 
+}
+
+/* --- Hamburger Menu Styling (Hidden by default on Desktop) --- */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    margin-left: auto; 
+    z-index: 1001; 
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #00ff99;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Active/Open state for the menu (toggled by JS) */
+.navlink.active {
+    display: flex !important; 
+}
+
+/* Optional: Hamburger to 'X' animation */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* --- 3. Container 1: Hero Section --- */
+.container1{
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
 }
 
 .hh-normal{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    height: 400px;
-    width: 900px;
-}
-
-.container1{
-    /* align-items: center; */
-    /* justify-content: center; */
-    height: 540px;
-    width: auto;
+    margin: 0 auto;
+    max-width: 80%; 
+    height: auto;
+    margin-bottom: 40px;
 }
 
 .container1 h2{
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: -80px;
-    font-size: 30px;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8em; 
+    margin-top: -30px; 
+    line-height: 1.2;
 }
 
 .container1 h3{
-    text-align: center;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 20px;
-    font-size: 20px;
+    color: #9f9f9f; 
+    font-family: 'Segoe UI', sans-serif;
+    margin-top: 30px;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* --- 4. Container 2: Sections & Highlights --- */
 .container2{
-    height: 590px;
-    width: auto;
-    margin-top: 150px;
+    padding: 60px 20px;
+    margin: 50px auto;
+    max-width: 1100px; 
+    background-color: rgba(25, 30, 36, 0.7); 
+    border-radius: 12px;
+    border: 1px solid #1f3b4d; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
+
 .container2 h1{
     text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* margin-top: 37px; */
-    font-size: 80px;
-}
-.container2 li{
-    text-align: center;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 20px;
-    font-size: 50px;
+    color: #00ff99; 
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5em; 
+    margin-bottom: 50px;
 }
 
+.container2 h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #00ff99;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.container2 ul {
+    list-style-type: none;
+    padding: 0 40px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container2 li{
+    color: #e6edf3;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 15px 10px;
+    padding: 20px;
+    background-color: rgba(30, 40, 50, 0.5); 
+    border-left: 5px solid #00ff99; 
+    border-radius: 8px;
+    flex: 1 1 45%; 
+    min-width: 300px; 
+    text-align: left;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease;
+}
+
+.container2 li:hover {
+    background-color: rgba(40, 55, 70, 0.7);
+    border-left-color: #33aaff; 
+}
+
+/* 5. Logo Sections Styling */
+.container2.logo-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container2.logo-section .logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.container2.logo-section img {
+    height: 80px; 
+    width: auto;
+    margin: 15px 25px; 
+    filter: grayscale(100%) brightness(150%); 
+    opacity: 0.7;
+    transition: filter 0.5s ease, opacity 0.5s ease;
+}
+
+.container2.logo-section img:hover {
+    filter: none; 
+    opacity: 1;
+}
+
+
+/* ================================================= */
+/* 📱 1. MEDIA QUERY FOR MOBILE DEVICES (max-width: 768px) */
+/* ================================================= */
+@media (max-width: 768px) {
+    /* --- Navigation Bar Adjustments --- */
+    .navbar {
+        flex-wrap: nowrap; 
+        justify-content: space-between; 
+        padding: 10px 20px;
+        position: relative; 
+    }
+
+    .ajulogo {
+        height: 40px;
+        order: 1; 
+        margin-right: 5px;
+    }
+
+    .hh-round {
+        height: 50px;
+        width: 50px;
+        order: 2; 
+        margin-right: 0;
+    }
+    
+    /* Show Hamburger Icon */
+    .menu-toggle {
+        display: flex; 
+        order: 3;
+    }
+    
+    /* Hide Menu by Default and Set Dropdown Style */
+    .navlink {
+        display: none; /* Crucial: Hides the menu */
+        flex-direction: column;
+        background-color: rgba(13, 17, 23, 0.95);
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    
+    .navlink li {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .navlink li a {
+        font-size: 16px; 
+        padding: 10px 0;
+    }
+    
+    /* --- Hero Section Adjustments --- */
+    .container1 h2 {
+        font-size: 1.8em;
+    }
+
+    .container1 h3 {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+    
+    /* --- Content Section Adjustments --- */
+    .container2 {
+        margin: 30px 10px;
+        padding: 30px 10px;
+    }
+
+    .container2 h1 {
+        font-size: 2.5em;
+    }
+
+    .container2 li {
+        font-size: 1.1em;
+        flex: 1 1 100%; /* Stack list items vertically */
+    }
+
+    .container2.logo-section img {
+        height: 50px; 
+        margin: 10px 15px;
+    }
+}
+
+/* ================================================= */
+/* 💻 2. MEDIA QUERY FOR TABLET DEVICES (769px to 1024px) */
+/* ================================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 20px;
+    }
+    
+    /* Hide hamburger icon on tablet and desktop */
+    .menu-toggle {
+        display: none;
+    }
+
+    .navlink li {
+        margin-left: 20px;
+    }
+
+    .container1 h2 {
+        font-size: 2.3em;
+    }
+
+    .container2 {
+        max-width: 95%; 
+    }
+    
+    .container2 li {
+        font-size: 1.4em;
+        flex: 1 1 45%; 
+    }
+}
