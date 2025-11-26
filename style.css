@@ -215,7 +215,7 @@ body{
     border-left: 5px solid #00ff99; 
     border-radius: 8px;
     flex: 1 1 45%; 
-    min-width: 300px; 
+    /* min-width: 300px;  */
     text-align: left;
 }
 
