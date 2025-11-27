@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Horizon 2.0 - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="hh round.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="https://arkajainuniversity.ac.in/" target="_blank">
+            <img class="ajulogo" src="aju naac logo light.png" alt="ARKA JAIN University Logo">
+        </a>
+        <img class="hh-round" src="hh round.png" alt="Hack Horizon 2.0 Round Logo">
+        
+        <button class="menu-toggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        
+        <ul class="navlink" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#whatsapp-group">Whatsapp</a></li>
+            <li><a href="#about-us">Who We Are?</a></li>
+            <li><a href="#contact">Connect To Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container2 registration-container">
+        <h1>Team Registration</h1>
+        <p class="form-description">Secure your team's spot. **Registration Fee: ₹800 per team.** Minimum 3, Maximum 5 members. Fields marked with * are mandatory.</p>
+
+        <form id="registration-form" action="https://docs.google.com/forms/d/e/1FAIpQLScj0YzPMjuATEAqXY5upunrp4Uz7udsgatelJMkA29rnVYXFg/viewform?usp=header" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <label for="team-name"><i class="fas fa-users"></i> Team Name *</label>
+                <input type="text" id="team-name" name="entry.902486684" placeholder="e.g., The Code Breakers" required>
+            </div>
+            
+            <div id="participants-container">
+                
+                <fieldset class="participant-fieldset mandatory-participant" data-index="1">
+                    <legend>Participant 1 (Team Leader) *</legend>
+                    <div class="form-group">
+                        <label for="p1-name">Full Name *</label>
+                        <input type="text" id="p1-name" name="entry.1760055426" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p1-mobile">Mobile Number *</label>
+                        <input type="tel" id="p1-mobile" name="entry.866141412" placeholder="9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p1-email">Email Address *</label>
+                        <input type="email" id="p1-email" name="entry.1811358174" placeholder="email@example.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="participant-fieldset mandatory-participant" data-index="2">
+                    <legend>Participant 2 *</legend>
+                    <div class="form-group">
+                        <label for="p2-name">Full Name *</label>
+                        <input type="text" id="p2-name" name="entry.596540253" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p2-mobile">Mobile Number *</label>
+                        <input type="tel" id="p2-mobile" name="entry.1975956498" placeholder="9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p2-email">Email Address *</label>
+                        <input type="email" id="p2-email" name="entry.1527752908" placeholder="email@example.com" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="participant-fieldset mandatory-participant" data-index="3">
+                    <legend>Participant 3 *</legend>
+                    <div class="form-group">
+                        <label for="p3-name">Full Name *</label>
+                        <input type="text" id="p3-name" name="entry.319262207" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p3-mobile">Mobile Number *</label>
+                        <input type="tel" id="p3-mobile" name="entry.908796628" placeholder="9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="p3-email">Email Address *</label>
+                        <input type="email" id="p3-email" name="entry.584391840" placeholder="email@example.com" required>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="participant-fieldset optional-participant" data-index="4">
+                    <legend>Participant 4 (Optional)</legend>
+                    <div class="form-group">
+                        <label for="p4-name">Full Name</label>
+                        <input type="text" id="p4-name" name="entry.550971831" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="p4-mobile">Mobile Number</label>
+                        <input type="tel" id="p4-mobile" name="entry.2027778323" placeholder="9876543210">
+                    </div>
+                    <div class="form-group">
+                        <label for="p4-email">Email Address</label>
+                        <input type="email" id="p4-email" name="entry.2110818756" placeholder="email@example.com">
+                    </div>
+                </fieldset>
+                
+                <fieldset class="participant-fieldset optional-participant" data-index="5">
+                    <legend>Participant 5 (Optional)</legend>
+                    <div class="form-group">
+                        <label for="p5-name">Full Name</label>
+                        <input type="text" id="p5-name" name="entry.784798516" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="p5-mobile">Mobile Number</label>
+                        <input type="tel" id="p5-mobile" name="entry.19136435" placeholder="9876543210">
+                    </div>
+                    <div class="form-group">
+                        <label for="p5-email">Email Address</label>
+                        <input type="email" id="p5-email" name="entry.305139740" placeholder="email@example.com">
+                    </div>
+                </fieldset>
+
+            </div>
+            
+            <hr style="margin: 30px 0; border-color: #1f3b4d;">
+
+            <h2 style="color: #ffffff; text-align: center; margin-bottom: 20px;">Payment Details (₹800)</h2>
+            <div class="form-group">
+                <label for="payment-proof"><i class="fas fa-camera-retro"></i> Attach Payment Screenshot *</label>
+                <input type="file" id="payment-proof" name="entry.1929796162" accept="image/*, application/pdf" required>
+                <p class="form-note" style="color: #ffcccc; text-align: left;">
+                    **Important:** File upload requires a custom backend. If using a Google Form, upload the proof to a drive and paste the link here instead.
+                </p>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agree-t-c" name="agree_t_c" required>
+                <label for="agree-t-c" style="display: inline; margin-left: 10px;">
+                    I have read and agree to the 
+                    <a href="#" id="t-c-link" style="color: #33aaff; text-decoration: underline;">Terms and Conditions</a>. *
+                </label>
+            </div>
+
+            <button type="submit" class="submit-button">Submit Registration</button>
+            <p class="form-note">Please ensure all mandatory participant details (P1-P3) and payment proof are correct before submitting.</p>
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Hack Horizon 2.0. All rights reserved. <a href="index.html">Back to Home</a></p>
+    </footer>
+
+    <div id="tc-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Hack Horizon 2.0 - Terms and Conditions</h2>
+            <div class="modal-body">
+                <ol>
+                    <li>**Team Size:** Teams must consist of a minimum of 3 and a maximum of 5 participants.</li>
+                    <li>**Registration Fee:** A non-refundable fee of **₹800** per team is required for entry.</li>
+                    <li>**Payment Proof:** A clear screenshot or proof of payment must be attached during registration. Teams without valid proof will be disqualified.</li>
+                    <li>**Eligibility:** Participants must be currently enrolled university/college students.</li>
+                    <li>**Originality:** All submitted projects must be original work created entirely during the 24-hour hackathon period.</li>
+                    <li>**Code of Conduct:** All participants must adhere to the hackathon's Code of Conduct (available on the main event page). Harassment and discrimination will not be tolerated.</li>
+                    <li>**Intellectual Property:** Teams retain the intellectual property rights to their creations.</li>
+                    <li>**Judging:** Judges' decisions are final and binding.</li>
+                </ol>
+            </div>
+            <button id="modal-agree-button" class="submit-button" style="width: 50%; margin: 20px auto 0;">I Agree</button>
+        </div>
+    </div>
+
+
+    <script>
+        // --- Navigation Menu Toggle Script ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            const tcModal = document.getElementById('tc-modal');
+            const tcLink = document.getElementById('t-c-link');
+            const closeModal = document.querySelector('.close-button');
+            const modalAgreeButton = document.getElementById('modal-agree-button');
+            const agreeCheckbox = document.getElementById('agree-t-c');
+
+            // Hamburger Menu Logic
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuToggle.classList.toggle('open'); 
+            });
+            
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuToggle.classList.remove('open');
+                    }
+                });
+            });
+
+            // --- Modal/Popup Logic ---
+
+            // Open Modal
+            tcLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                tcModal.style.display = 'block';
+            });
+
+            // Close Modal
+            closeModal.addEventListener('click', () => {
+                tcModal.style.display = 'none';
+            });
+
+            // Close Modal when clicking outside
+            window.addEventListener('click', (event) => {
+                if (event.target == tcModal) {
+                    tcModal.style.display = 'none';
+                }
+            });
+
+            // Agree Button action
+            modalAgreeButton.addEventListener('click', () => {
+                agreeCheckbox.checked = true;
+                tcModal.style.display = 'none';
+            });
+            
+        });
+        
+        // --- Client-Side Form Validation (Ensures P1-P3 are fully filled) ---
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            const teamName = document.getElementById('team-name').value.trim();
+            const agreeCheckbox = document.getElementById('agree-t-c');
+            const paymentProof = document.getElementById('payment-proof').value;
+            let isValid = true;
+            
+            // 1. Team Name Check
+             if (!teamName) {
+                alert("Team Name is mandatory.");
+                isValid = false;
+                document.getElementById('team-name').focus();
+                e.preventDefault();
+                return;
+            }
+
+            // 2. T&C Check
+            if (!agreeCheckbox.checked) {
+                alert("You must agree to the Terms and Conditions to register.");
+                isValid = false;
+                e.preventDefault();
+                return;
+            }
+
+            // 3. Payment Proof Check
+            if (!paymentProof) {
+                alert("Please attach the payment screenshot proof.");
+                isValid = false;
+                e.preventDefault();
+                return;
+            }
+
+            // 4. Basic Validation for Mandatory Participants (P1-P3)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            for (let i = 1; i <= 3; i++) {
+                const name = document.getElementById(`p${i}-name`).value.trim();
+                const mobile = document.getElementById(`p${i}-mobile`).value.trim();
+                const email = document.getElementById(`p${i}-email`).value.trim();
+
+                if (!name || !mobile || !email) {
+                    alert(`Participant ${i} (Mandatory) details are incomplete. Please fill in Name, Mobile, and Email.`);
+                    isValid = false;
+                    document.getElementById(`p${i}-name`).focus();
+                    e.preventDefault();
+                    return;
+                }
+                
+                // Simple email check for mandatory fields
+                if (!emailRegex.test(email)) {
+                    alert(`Participant ${i}'s email address is invalid.`);
+                    document.getElementById(`p${i}-email`).focus();
+                    isValid = false;
+                    e.preventDefault();
+                    return;
+                }
+            }
+            
+            // 5. Check Optional Participants (P4 & P5): If one field is filled, all three must be filled.
+            for (let i = 4; i <= 5; i++) {
+                const name = document.getElementById(`p${i}-name`).value.trim();
+                const mobile = document.getElementById(`p${i}-mobile`).value.trim();
+                const email = document.getElementById(`p${i}-email`).value.trim();
+                
+                // Check if ANY field is filled
+                if (name || mobile || email) {
+                    // Check if ALL fields are filled
+                    if (!name || !mobile || !email) {
+                        alert(`Participant ${i} is partially filled. If you include an optional member, you must provide their Name, Mobile, and Email.`);
+                        isValid = false;
+                        document.getElementById(`p${i}-name`).focus();
+                        e.preventDefault();
+                        return;
+                    }
+                    // Check email format if fields are filled
+                    if (!emailRegex.test(email)) {
+                        alert(`Participant ${i}'s email address is invalid.`);
+                        document.getElementById(`p${i}-email`).focus();
+                        isValid = false;
+                        e.preventDefault();
+                        return;
+                    }
+                }
+            }
+
+            if (isValid) {
+                // If validation passes, the form will submit normally.
+                // You can add a success message here if you want before submission.
+            }
+        });
+    </script>
+</body>
+</html>

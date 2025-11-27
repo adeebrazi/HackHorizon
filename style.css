@@ -1,12 +1,13 @@
 /* --- 0. Global Reset & Box Sizing --- */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
 
-body{
+body {
     background-color: #0d1117; 
+    /* Ensure the path to your background image is correct */
     background-image: url('270.jpg'); 
     background-size: cover;
     background-position: center;
@@ -17,7 +18,7 @@ body{
 }
 
 /* --- 2. Navigation Bar (Desktop/Tablet) --- */
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     padding: 10px 40px;
@@ -28,14 +29,14 @@ body{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-.ajulogo{
+.ajulogo {
     height: 50px;
     width: auto;
     cursor: pointer;
     margin-right: 20px;
 }
 
-.hh-round{
+.hh-round {
     height: 70px;
     width: 70px;
     margin-right: 20px;
@@ -49,7 +50,7 @@ body{
     box-shadow: 0 0 15px #ffffff;
 }
 
-.navlink{
+.navlink {
     list-style: none;
     display: flex; 
     align-items: center;
@@ -70,7 +71,7 @@ body{
 
 .navlink li a:hover {
     color: #0400ff; 
-    text-shadow: 0 0 10px rgba(51, 170, 255, 0.7); 
+    text-shadow: 0 0 10px rgba(4, 0, 255, 0.7); /* Using primary accent color */
 }
 
 /* --- 3. Hamburger Menu Base Styles (Desktop Hidden) --- */
@@ -112,14 +113,14 @@ body{
     transform: translateY(-9px) rotate(-45deg);
 }
 
-/* --- 4. Container 1: Hero Section --- */
-.container1{
+/* --- 4. Container 1: Hero Section (Only on index.html) --- */
+.container1 {
     padding-top: 80px;
     padding-bottom: 100px;
     text-align: center;
 }
 
-.hh-normal{
+.hh-normal {
     display: block;
     margin: 0 auto;
     max-width: 80%; 
@@ -127,7 +128,7 @@ body{
     margin-bottom: 40px;
 }
 
-.container1 h2{
+.container1 h2 {
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 2.8em; 
@@ -135,7 +136,7 @@ body{
     line-height: 1.2;
 }
 
-.container1 h3{
+.container1 h3 {
     color: #9f9f9f; 
     font-family: 'Segoe UI', sans-serif;
     margin-top: 30px;
@@ -145,8 +146,8 @@ body{
     margin-right: auto;
 }
 
-/* --- 5. Container 2: Sections & Highlights --- */
-.container2{
+/* --- 5. Container 2: Sections & Highlights / Form Container --- */
+.container2 {
     padding: 60px 20px;
     margin: 50px auto;
     max-width: 1100px; 
@@ -156,12 +157,20 @@ body{
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.container2 h1{
+.container2.registration-container {
+    /* Adjust margin top for the registration page to place content higher */
+    margin-top: 100px;
+    padding-bottom: 80px;
+}
+
+.container2 h1 {
     text-align: center;
     color: #0400ff; 
     font-family: 'Poppins', sans-serif;
     font-size: 3.5em; 
     margin-bottom: 50px;
+    /* Neon glow effect for heading */
+    text-shadow: 0 0 7px rgba(4, 0, 255, 0.8), 0 0 15px rgba(4, 0, 255, 0.5);
 }
 
 .container2 h1::after {
@@ -172,6 +181,8 @@ body{
     background: #0400ff;
     margin: 10px auto 0;
     border-radius: 2px;
+    /* Subtle glow for the underline */
+    box-shadow: 0 0 5px rgba(4, 0, 255, 0.8);
 }
 
 .container2 ul {
@@ -182,7 +193,7 @@ body{
     justify-content: space-around;
 }
 
-.container2 li{
+.container2 li {
     color: #e6edf3;
     font-size: 1.5em;
     font-weight: 400;
@@ -196,7 +207,108 @@ body{
     text-align: left;
 }
 
-/* 6. Logo Sections Styling */
+/* --- 6. Form Specific Styles ENHANCEMENT --- */
+.form-description {
+    text-align: center;
+    color: #b0b0b0; /* Slightly lighter for readability */
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.registration-container form {
+    max-width: 650px; /* Slightly wider form for desktop */
+    margin: 0 auto;
+    padding: 20px;
+    /* Add subtle container visual break */
+    background: rgba(30, 40, 50, 0.2); 
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Using Flexbox for aligned labels/inputs on desktop */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    color: #e6edf3;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 1.05em;
+    /* Add a subtle text shadow for lift */
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #1f3b4d; 
+    background-color: #1a202c; 
+    color: #e6edf3;
+    border-radius: 8px; /* Slightly rounder edges */
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical; 
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0400ff; /* Neon Blue border on focus */
+    box-shadow: 0 0 10px rgba(4, 0, 255, 0.8); /* Stronger neon glow on focus */
+    background-color: #151a22; /* Slightly darker background on focus */
+}
+
+.form-group textarea {
+    min-height: 100px; /* Ensure textarea is tall enough */
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 35px;
+    background-color: #0400ff; 
+    color: #e6edf3; 
+    border: none;
+    border-radius: 8px; /* Consistent rounding */
+    font-size: 1.25em;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); 
+    /* Main button glow */
+    box-shadow: 0 0 15px rgba(4, 0, 255, 0.5); 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #2bff00; 
+    color: #0400ff;
+    transform: translateY(-3px); /* More pronounced lift */
+    box-shadow: 0 0 20px rgba(4, 0, 255, 0.8), 0 10px 20px rgba(0, 0, 0, 0.5); /* Stronger neon shadow and depth */
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #9f9f9f;
+    margin-top: 20px;
+}
+
+
+/* 7. Logo Sections Styling */
 .container2.logo-section {
     text-align: center;
     display: flex;
@@ -214,10 +326,11 @@ body{
 }
 
 .container2.logo-section img {
-    height: 80px; 
-    width: auto;
+    height: 300px; 
+    width: 300px;
+    display: inline-block;
     margin: 15px 25px; 
-    filter: grayscale(100%) brightness(150%); 
+    /* filter: grayscale(100%) brightness(150%);  */
     opacity: 0.7;
     transition: filter 0.5s ease, opacity 0.5s ease;
 }
@@ -226,6 +339,25 @@ body{
     filter: none; 
     opacity: 1;
 }
+
+/* 8. Footer Styles */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(13, 17, 23, 0.9);
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #0400ff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 /* ================================================= */
 /* 📱 MEDIA QUERY FIXES FOR MOBILE DEVICES (max-width: 768px) */
@@ -255,15 +387,11 @@ body{
         height: 180px; /* Smaller hero image */
     }
 
+    /* Corrected H1 underline width for mobile */
     .container2 h1::after {
-    /* content: ''; */
-    /* display: block; */
-    width: 60px;
-    /* height: 6px; */
-    /* background: #0400ff; */
-    /* margin: 10px auto 0; */
-    /* border-radius: 2px; */
-}
+        width: 60px;
+        height: 4px; /* Slightly thinner underline */
+    }
     
     .menu-toggle {
         display: flex; 
@@ -301,7 +429,7 @@ body{
     }
     
     .container1 h2 {
-        font-size: 15px; 
+        font-size: 1.7em; /* Reduced size for better wrapping */
     }
 
     .container1 h3 {
@@ -311,13 +439,19 @@ body{
     
     /* --- Container and Highlights Fixes --- */
     .container2 {
-        max-width: 90%; /* Constrain width */
+        max-width: 95%; /* Constrain width */
         margin: 30px auto; 
         padding: 20px 10px; 
     }
 
+    /* Fix spacing on the registration page */
+    .container2.registration-container {
+        margin-top: 80px;
+    }
+
     .container2 h1 {
         font-size: 2em; 
+        margin-bottom: 0px;
     }
 
     .container2 ul {
@@ -326,16 +460,43 @@ body{
     
     .container2 li {
         font-size: 1.1em;
-        /* flex: 1 1 100%;  */
+        flex: 1 1 100%; /* Make list items stack vertically */
         margin: 10px 0;
-        /* padding: 15px; */
+        padding: 15px;
         display: flex; 
         align-items: center; 
     }
 
     .container2.logo-section img {
-        height: 40px; 
-        margin: 10px 10px;
+        height: auto; 
+        width: 200px;
+        /* margin: 10px 10px; */
+    }
+
+    /* Form specific mobile fixes */
+    .registration-container form {
+        padding: 10px;
+    }
+
+    .form-group {
+        /* Remove flex on mobile to stack label and input */
+        display: block; 
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95em;
+    }
+
+    .submit-button {
+        font-size: 1.1em;
+        padding: 12px;
     }
 }
 
@@ -349,4 +510,185 @@ body{
     .container1 h2 {font-size: 2.3em;}
     .container2 {max-width: 95%;}
     .container2 li {font-size: 1.4em; flex: 1 1 45%;}
+}
+
+/* --- New Styles for Participant Fields --- */
+.participant-fieldset {
+    border: 1px solid #0400ff; /* Neon border */
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    background-color: rgba(30, 40, 50, 0.3);
+}
+
+.participant-fieldset legend {
+    color: #0400ff;
+    font-size: 1.3em;
+    font-weight: 700;
+    padding: 0 10px;
+    border-bottom: none;
+    text-shadow: 0 0 5px rgba(4, 0, 255, 0.8);
+}
+
+.participant-fieldset .form-group {
+    /* Adjust internal form-groups for a tighter layout within fieldset */
+    margin-bottom: 15px;
+    /* Optional: use flex for horizontal alignment if desired */
+}
+
+/* Button to add/remove participants */
+.remove-participant-button{
+    background-color: #ffffff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-participant-button {
+    background-color: #ffffff;
+    color: #0400ff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-participant-button:hover, .remove-participant-button:hover {
+    background-color: #0400ff;
+    color: #ffffff;
+}
+
+.remove-participant-button {
+    background-color: #ff3333;
+    margin-bottom: 20px;
+}
+.remove-participant-button:hover {
+    background-color: #cc0000;
+}
+
+
+/* --- Styles for Modal/Popup (Terms and Conditions) --- */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1002; /* Sit on top of everything */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #1a202c;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 30px;
+    border: 1px solid #1f3b4d;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(4, 0, 255, 0.5);
+    position: relative;
+    color: #e6edf3;
+}
+
+.modal-content h2 {
+    color: #0400ff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 15px; /* Space for scrollbar */
+}
+
+.modal-body ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.modal-body li {
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-size: 1.05em;
+}
+
+/* The Close Button */
+.close-button {
+    color: #e6edf3;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ff3333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    /* Optional: Style the checkbox more with accent color */
+    accent-color: #0400ff; 
+}
+
+
+/* --- Mobile Fix for Modal --- */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 15px;
+    }
+    .modal-body {
+        max-height: 60vh;
+    }
+    .modal-content h2 {
+        font-size: 1.5em;
+    }
+    .add-participant-button, .remove-participant-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
 }
