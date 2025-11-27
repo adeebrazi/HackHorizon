@@ -46,7 +46,7 @@ body {
 }
 
 .hh-round:hover {
-    transform: scale(1.05) rotate(180deg);
+    transform: scale(1.05) rotate(360deg);
     box-shadow: 0 0 15px #ffffff;
 }
 
