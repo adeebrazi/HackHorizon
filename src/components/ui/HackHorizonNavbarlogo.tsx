@@ -1,7 +1,7 @@
 import Image from "next/image"
 import shieldLogo from "../../assets/svg/shield.png"
 
-export default function InnerveNavbarLogo() {
+export default function HackHorizonNavbarLogo() {
     return ( 
         <Image 
             src={shieldLogo}

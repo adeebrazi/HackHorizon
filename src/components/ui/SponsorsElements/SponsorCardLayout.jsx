@@ -1,9 +1,9 @@
 import SponsorCard from './SponsorCard';
-import { DevfolioImage, Keychainlogo, CodeCraftersLogo } from '@/components/ui/SponsorsElements/SponsorsImages';
+import { DevfolioImage, CodeCraftersLogo } from '@/components/ui/SponsorsElements/SponsorsImages';
 
 const sponsors1 = [
   // { image: UdchaloImage, alt: 'Udchalo Sponsor' },
-  { image: Keychainlogo, alt: 'Sponsor 2' },
+  // { image: Keychainlogo, alt: 'Sponsor 2' }, // TODO: Add keyChainLogo.svg
   // { image: DevfolioImage, alt: 'Sponsor 3' },
 ];
 

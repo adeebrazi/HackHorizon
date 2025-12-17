@@ -8,7 +8,7 @@ import sparkgif from '@/assets/gif/sparks.gif'
 // import ethIndiaImage from '@/assets/svg/ETHIndiaLogo.png' // TODO: Add ETHIndiaLogo.png to assets
 import devfolioImage from '@/assets/svg/DevfolioLogo.svg'
 import codeComputeSociety from '@/assets/images/CodeComputeSociety.png';
-import keychainlogo from '@/assets/svg/keyChainLogo.svg';
+// import keychainlogo from '@/assets/svg/keyChainLogo.svg'; // TODO: Add keyChainLogo.svg to assets
 // import keplologo from "@/assets/images/keploLogo.png" // TODO: Add keploLogo.png to assets
 // import givemycertificate from "@/assets/images/givemycertficateLogo.png"; // TODO: Add givemycertficateLogo.png to assets
 
@@ -92,13 +92,14 @@ export function DevfolioImage() {
 // }
 
 
-export function Keychainlogo() {
-  return (
-    <div className='max-w-[80%]'>
-      <Image src={keychainlogo} alt="ETHIndia Sponsor" draggable={false} className='scale-140' />
-    </div>
-  );
-}
+// TODO: Uncomment when keyChainLogo.svg is added
+// export function Keychainlogo() {
+//   return (
+//     <div className='max-w-[80%]'>
+//       <Image src={keychainlogo} alt="ETHIndia Sponsor" draggable={false} className='scale-140' />
+//     </div>
+//   );
+// }
 
 // TODO: Uncomment when keploLogo.png is added
 // export function Keplologo() {
