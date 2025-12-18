@@ -3,8 +3,9 @@ import { motion, type MotionValue } from "framer-motion";
 interface TimelineCardProps {
   cardNumber: number;
   cardHeading: string;
-  cardLine1: string;
-  cardLine2: string;
+  cardLine1?: string;
+  cardLine2?: string;
+  scheduleItems?: string[];
   opacity?: MotionValue<number>;
   position?: "left" | "right";
   containerClassName?: string;
@@ -18,6 +19,7 @@ export default function TimelineCard({
   cardHeading, 
   cardLine1, 
   cardLine2,
+  scheduleItems,
   opacity,
   position = "right",
   containerClassName = "",
@@ -37,7 +39,17 @@ export default function TimelineCard({
         {cardHeading}
       </div>
       <div className={`text-white text-[12px] sm:text-[18px] md:text-xl lg:text-2xl [text-shadow:0px_4px_0px_rgb(0_0_0/1.00)] wrap-break-word overflow-wrap-anywhere ${descriptionClassName}`}>
-        {cardLine1} <br /> {cardLine2}
+        {scheduleItems ? (
+          <ul className="list-none space-y-1 sm:space-y-2">
+            {scheduleItems.map((item, index) => (
+              <li key={index} className="leading-relaxed">{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <>
+            {cardLine1} <br /> {cardLine2}
+          </>
+        )}
       </div>
     </motion.div>
   );

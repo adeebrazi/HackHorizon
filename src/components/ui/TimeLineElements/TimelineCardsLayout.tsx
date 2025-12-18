@@ -16,8 +16,9 @@ interface ResponsiveValue {
 interface TimelineCardData {
   cardNumber: number;
   cardHeading: string;
-  cardLine1: string;
-  cardLine2: string;
+  cardLine1?: string;
+  cardLine2?: string;
+  scheduleItems?: string[];
   position: "left" | "right";
   yPosition: ResponsiveValue;
   containerClassName?: string;
@@ -30,7 +31,7 @@ const timelineData: TimelineCardData[] = [
   {
     cardNumber: 1,
     cardHeading: "Registration Starts",
-    cardLine1: "Secure your spot starting November 15, 2025, at 12:00 AM IST.",
+    cardLine1: "Secure your spot starting December 25, 2025, at 12:00 AM IST.",
     cardLine2: "Join us for an exciting 24-hour hackathon by registering early!",
     position: "right",
     yPosition: { base: 230, xs: 200, sm: 260, md: 220, lg: 320, xl: 320 },
@@ -42,7 +43,7 @@ const timelineData: TimelineCardData[] = [
   {
     cardNumber: 2,
     cardHeading: "Registration Ends",
-    cardLine1: "Registration closes on December 15, 2025, at 11:59 PM IST.",
+    cardLine1: "Registration closes on February 5, 2026, at 11:59 PM IST.",
     cardLine2: "Don't miss your chance to be part of this incredible event!",
     position: "left",
     yPosition: { base: 670, xs: 630, sm: 710, md: 700, lg: 720, xl: 680 },
@@ -53,9 +54,17 @@ const timelineData: TimelineCardData[] = [
   },
   {
     cardNumber: 3,
-    cardHeading: "Announcement of Shortlisted Teams",
-    cardLine1: "Shortlisted teams will be announced on February 16, 2026.",
-    cardLine2: "Check back to see if your team advances.",
+    cardHeading: "Day 1: 16-02-2026",
+    scheduleItems: [
+      "09:00 AM – Reporting Time",
+      "10:00 – 10:45 AM – Inaugural & Welcome Session",
+      "10:45 – 11:00 AM – Problem Statement Announcement",
+      "11:00 AM – Hackathon Starts",
+      "01:00 – 02:00 PM – Lunch Break",
+      "06:00 – 06:30 PM – Fun Break & Refreshments",
+      "08:00 – 09:00 PM – Dinner Break",
+      "11:00 – 11:30 PM – Bonfire & Energizer Activity"
+    ],
     position: "right",
     yPosition: { base: 1100, xs: 1140, sm: 1120, md: 1160, lg: 1180, xl: 1180 },
     containerClassName: "mr-[15%] ml-[15%] sm:ml-[12%] lg:mr-[10%] pl-4 sm:pl-4 pr-12",
@@ -65,9 +74,15 @@ const timelineData: TimelineCardData[] = [
   },
   {
     cardNumber: 4,
-    cardHeading: "Hackathon Begins",
-    cardLine1: "The 24-hour coding marathon starts on February 17, 2026.",
-    cardLine2: "Build innovative solutions and bring your ideas to life!",
+    cardHeading: "Day 2: 17-02-2026",
+    scheduleItems: [
+      "02:00 – 03:00 AM – Progress Check",
+      "07:00 – 08:00 AM – Final Check & Refinements",
+      "08:30 – 09:30 AM – Breakfast",
+      "10:00 – 11:00 AM – Submission & Presentations",
+      "11:00 AM – Hackathon Ends",
+      "11:00 – 11:45 AM – Closing Ceremony"
+    ],
     position: "left",
     yPosition: { base: 1600, xs: 1600, sm: 1600, md: 1600, lg: 1650, xl: 1680 },
     containerClassName: "mr-[20%] lg:mr-[0%] ml-[18%]  pl-4 pr-8",
@@ -78,8 +93,8 @@ const timelineData: TimelineCardData[] = [
   {
     cardNumber: 5,
     cardHeading: "Results Announced",
-    cardLine1: "Winners will be announced on February 28, 2026.",
-    cardLine2: "Exciting prizes and recognition awa its!",
+    cardLine1: "Winners will be announced at the closing ceremony on February 17, 2026.",
+    cardLine2: "Exciting prizes and recognition awaits the top teams!",
     position: "right",
     yPosition: { base: 2100, xs: 2100, sm: 2100, md: 2100, lg: 2100, xl: 2200 },
     containerClassName: "ml-[25%] sm:ml-[20%] md:ml-0 mr-[20%] lg:mr-[10%] pl-4 pr-8",
@@ -133,6 +148,7 @@ export default function TimelineCardsLayout({ circleOpacities = [] }: TimelineCa
               cardHeading={data.cardHeading}
               cardLine1={data.cardLine1}
               cardLine2={data.cardLine2}
+              scheduleItems={data.scheduleItems}
               position={data.position}
               opacity={circleOpacities[index]}
               containerClassName={data.containerClassName}
