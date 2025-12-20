@@ -5,7 +5,6 @@ import sponsorCard from '@/assets/svg/SponsorCard.svg';
 import backgroundImage from '@/assets/images/SponsorsBackground.png'
 import headingEnds from '@/assets/svg/SponsorHeadingEnds.svg'
 // import ethIndiaImage from '@/assets/svg/ETHIndiaLogo.png' // TODO: Add ETHIndiaLogo.png to assets
-import devfolioImage from '@/assets/svg/DevfolioLogo.svg'
 import codeComputeSociety from '@/assets/images/CodeComputeSociety.png';
 // import keychainlogo from '@/assets/svg/keyChainLogo.svg'; // TODO: Add keyChainLogo.svg to assets
 // import keplologo from "@/assets/images/keploLogo.png" // TODO: Add keploLogo.png to assets
@@ -66,13 +65,6 @@ export function HeadingEndRight() {
 }
 
 
-export function DevfolioImage() {
-  return (
-    <div className='max-w-[80%]'>
-      <Image src={devfolioImage} alt="Devfolio Sponsor" draggable={false}/>
-    </div>
-  );
-}
 
 // TODO: Uncomment when ETHIndiaLogo.png is added
 // export function ETHIndiaImage() {

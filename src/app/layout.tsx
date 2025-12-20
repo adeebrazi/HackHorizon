@@ -41,9 +41,9 @@ const clashClan = localFont({
 export const metadata: Metadata = {
   title: "Hack Horizon 2.0 | Where Innovation Meets Reality",
   description: "A 24-hour hackathon by School of Engineering & IT, ARKA JAIN University × GDG On Campus AJU | Feb 16-17, 2026",
-  icons: {
-    icon: "/favicon.svg",
-  },
+  // icons: {
+  //   icon: "/favicon.svg",
+  // },
 };
 
 export default function RootLayout({

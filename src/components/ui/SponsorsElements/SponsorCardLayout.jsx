@@ -1,14 +1,12 @@
 import SponsorCard from './SponsorCard';
-import { DevfolioImage, CodeCraftersLogo } from '@/components/ui/SponsorsElements/SponsorsImages';
+import { CodeCraftersLogo } from '@/components/ui/SponsorsElements/SponsorsImages';
 
 const sponsors1 = [
   // { image: UdchaloImage, alt: 'Udchalo Sponsor' },
   // { image: Keychainlogo, alt: 'Sponsor 2' }, // TODO: Add keyChainLogo.svg
-  // { image: DevfolioImage, alt: 'Sponsor 3' },
 ];
 
 const sponsors2 = [
-  { image: DevfolioImage, alt: 'Udchalo Sponsor' },
   // { image: ETHIndiaImage, alt: 'Sponsor 2' },
   // { image: UdchaloImage, alt: 'Sponsor 3' },
 ];

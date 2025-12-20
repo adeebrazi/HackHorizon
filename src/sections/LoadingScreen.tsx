@@ -51,14 +51,6 @@ export default function LoadingScreen() {
             />
             <div className="relative flex flex-col items-center z-10">
                 <div className="relative md:h-52 md:w-32 w-26 h-42">
-                    <Image 
-                        src="/loading/InnerveLoadingLogo.svg" 
-                        alt="Innerve Logo" 
-                        fill 
-                        className="mx-auto z-0 mb-4" 
-                        draggable={false}
-                        priority
-                    />
                     <motion.div
                         animate={{
                             x: [0, 10, -10, 0],

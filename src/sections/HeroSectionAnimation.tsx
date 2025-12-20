@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Image from "next/image";
 import backgroundImage from "../assets/images/background.png";
 import InnerveHeadingLogo from "@/components/ui/HackHorizonlogo";
-import DevfolioButton from "@/components/ui/DevfolioButton";
+import RegisterNowButton from "@/components/ui/RegisterNowButton";
 import BalloonShip from "@/components/ui/HeroSectionElement/BalloonShip";
 import Cloud from "@/components/ui/HeroSectionElement/Cloud";
 import BlueDragon from "@/components/ui/HeroSectionElement/BlueDragon";
@@ -116,7 +116,7 @@ export default function HeroSectionAnimation() {
 
             <motion.div className="z-40 flex flex-col items-center space-y-10 " style={{ y: centerContentY }} >
                 <InnerveHeadingLogo />
-                <DevfolioButton />
+                <RegisterNowButton />
             </motion.div>
         </section>
     )
