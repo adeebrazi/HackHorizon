@@ -9,17 +9,12 @@ import HeroSectionAnimation from "@/sections/HeroSectionAnimation";
 import LoadingScreen from "@/sections/LoadingScreen";
 import Audio from "@/components/ui/Audio";
 import ScrollBackToTopButton from "@/components/ui/scrollBackToTopButton";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import Glimpse from "@/sections/Glimpse";
 import OrganizersSection from "@/sections/OrganizersSection";
 import Sponsors from "@/sections/SponsorsSection";
 
 // Lazy load below-the-fold sections
-const PrizePoolSection = dynamic(() => import("@/sections/PrizePoolSection"), {
-  loading: () => <div className="min-h-screen" />,
-  ssr: false,
-});
-
 const TrackSection = dynamic(() => import("@/sections/TrackSection"), {
   loading: () => <div className="min-h-screen" />,
   ssr: false,
@@ -87,9 +82,6 @@ export default function Home() {
       <DividerNoArrow />
       <div id="clock-section" data-section="clock">
         <ClockBannerSection />
-      </div>
-      <div id="prizepool-section" data-section="prizepool">
-        <PrizePoolSection />
       </div>
       <Divider />
       <div id="track-section" data-section="tracks">
