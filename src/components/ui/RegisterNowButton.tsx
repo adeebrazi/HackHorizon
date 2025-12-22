@@ -1,13 +1,12 @@
 
 import Image from "next/image";
 import applyWDBG from '@/assets/webp/ApplyWDBG.webp';
+import { useRouter } from "next/navigation";
 
 export default function RegisterNowButton() {
+  const router = useRouter();
   const handleClick = () => {
-    const registerSection = document.getElementById('register-section');
-    if (registerSection) {
-      registerSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    router.push("/registration");
   };
   return (
     <button

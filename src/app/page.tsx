@@ -31,7 +31,7 @@ const TrackSection = dynamic(() => import("@/sections/TrackSection"), {
   ssr: false,
 });
 
-const TimelineSection = dynamic(() => import("@/sections/timelineSection"), {
+const TimelineSection = dynamic(() => import("@/sections/TimelineSection"), {
   loading: () => <div className="min-h-screen" />,
   ssr: false,
 });
