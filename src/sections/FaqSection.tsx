@@ -26,36 +26,36 @@ export default function FaqSection() {
             {
                 question: "Where is the hackathon going to take place?",
                 answer:
-                    "The Idea Building Round, will take place offline at the ARKA JAIN University Campus.",
+                    "The entire hackathon will take place offline at the ARKA JAIN University Campus.",
             },
             {
                 question: "Who is eligible to participate?",
                 answer:
-                    "Hack Horizon 2.0 welcomes participants passionate about coding with keen interest in problem-solving.",
+                    "Hack Horizon 2.0 is open to anyone enthusiastic about coding and eager to tackle real-world challenges through innovative solutions.",
             },
             {
                 question: "What kind of prizes can participants expect?",
                 answer:
-                    "Prizes include cash rewards, goodies, certificates, and special surprises for the winners.",
+                    "Winners will receive cash rewards and goodies. All participants will receive certificates.",
             },
         ],
         REGISTRATION: [
             {
                 question: "How do I apply for Hack Horizon 2.0?",
                 answer:
-                    "Our registration forms are out. Kindly refer to the filling instructions available on the website.",
+                    "Please register directly on our website using the Register button.",
             },
             {
                 question: "Is there a registration fee for Hack Horizon?",
-                answer: "There is no registration fee. It's open for all.",
+                answer: "Yes, the registration fee is ₹800 per team.",
             },
             {
                 question: "Is there a minimum or maximum size for the team?",
-                answer: "Yes, 2-4 participants are allowed per team.",
+                answer: "Yes, 4-5 participants are allowed per team.",
             },
             {
-                question: "What are the dates of Phase 1 & 2?",
-                answer: `Idea Pitching: 15th Dec - 31st Jan & 24hrs Hackathon: 16th - 17th Feb 2026`,
+                question: "What are the dates of the hackathon?",
+                answer: `16th - 17th February 2026 (24-hour hackathon at ARKA JAIN University Campus).`,
             },
         ],
         "STAY & TRAVEL": [
@@ -66,7 +66,7 @@ export default function FaqSection() {
             {
                 question: "How to reach the venue?",
                 answer:
-                    "Please contact GDG On Campus AJU, our team will be available to assist you with the location and travel details.",
+                    "Please contact the Faculty Coordinator for assistance with location and travel details.",
             },
             {
                 question: "What to bring during in-person reporting at the venue?",
@@ -78,12 +78,12 @@ export default function FaqSection() {
             {
                 question: "What expenses does Hack Horizon 2.0 cover for participants?",
                 answer:
-                    "Hack Horizon 2.0 covers the registration fees for all participants, ensuring a seamless experience for attendees.",
+                    "Hack Horizon 2.0 will provide food and accommodation for all participants during the event.",
             },
             {
                 question: "Are travel-related expenses reimbursable for participants?",
                 answer:
-                    "The organizers will not cover travel expenses for participants.",
+                    "Travel expenses will not be reimbursed and must be borne by the participants themselves.",
             },
             {
                 question: "Is there any additional cost for mess and lodgings?",
