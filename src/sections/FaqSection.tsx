@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import Galaxy from "@/components/ui/TracksElements/Glaxy";
-// import Pink_Board from "../assets/Faq_board.png";
 
 type CategoryType = "GENERAL" | "REGISTRATION" | "STAY & TRAVEL" | "EXPENSES";
 
@@ -25,9 +24,9 @@ export default function FaqSection() {
                     "A 24-hour hackathon with challenging problems, exciting swags and goodies for participants. We also conduct seminars and interactions with industry experts.",
             },
             {
-                question: "What are the different phases of the hackathon?",
+                question: "Where is the hackathon going to take place?",
                 answer:
-                    "Phase 1, the Idea Submission Round, will be conducted online, while Phase 2, the Building Round, will take place offline at the ARKA JAIN University Campus.",
+                    "The Idea Building Round, will take place offline at the ARKA JAIN University Campus.",
             },
             {
                 question: "Who is eligible to participate?",
@@ -64,11 +63,6 @@ export default function FaqSection() {
                 question: "Where can participants find accommodation during Hack Horizon 2.0?",
                 answer: "Lodging is available at the ARKA JAIN University Campus itself.",
             },
-            // {
-            //     question: "How do I book accommodation?",
-            //     answer:
-            //         "We will be providing accomodation for participants on our own, there will be no hassle from your side. All finalists will be provided with lodging.",
-            // },
             {
                 question: "How to reach the venue?",
                 answer:
@@ -126,8 +120,8 @@ export default function FaqSection() {
                     Quick answers to questions you may have
                 </p>
             </div>
-            <div className="relative flex max-md:flex-col  z-10 justify-between items-center px-3 md:px-10 " >
-                <div className=" w-full  md:w-1/3 " >
+            <div className="relative flex max-md:flex-col  z-10 justify-between items-start px-3 md:px-10 " >
+                <div className=" w-full  md:w-1/3 sticky top-10" >
                     <div className="flex flex-col items-center gap-y-6 w-full" >
                         {categories.map((category) => (
                             <button
@@ -136,7 +130,7 @@ export default function FaqSection() {
                                 className="md:w-full w-7/10 cursor-pointer transition-transform duration-200 hover:scale-[1.01] active:scale-95"
                                 style={{ width: 'full', paddingLeft: 11, paddingRight: 11, paddingTop: 10, paddingBottom: 10, background: 'linear-gradient(0deg, #DB7200 49%, #EDAA4A 50%, #FFE394 100%)', boxShadow: '0px 1.650254726409912px 0px #FBBB31 inset', overflow: 'hidden', borderRadius: 47.86, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
                                 <div style={{ alignSelf: 'stretch', paddingLeft: 16, paddingRight: 16, paddingTop: 8, paddingBottom: 8, background: '#FCCC31', boxShadow: '0px -2.0628185272216797px 0px #F8DC47 inset', overflow: 'hidden', borderRadius: 35.29, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex' }}>
-                                    <div style={{ textAlign: 'center', color: 'white', fontWeight: '400', wordWrap: 'break-word', textShadow: '0px 3px 0px rgba(0, 0, 0, 1.00)' }} className="text-stroke-black md:text-4xl text-lg ">{category}</div>
+                                    <div style={{ textAlign: 'center', color: 'white', fontWeight: '400', wordWrap: 'break-word', textShadow: '0px 3px 0px rgba(0, 0, 0, 1.00)' }} className="text-stroke-black md:text-4xl text-lg font-angrybirds">{category}</div>
                                 </div>
                             </button>
                         ))}
@@ -148,13 +142,13 @@ export default function FaqSection() {
                             {faqsData[selectedCategory].map((faq, index) => (
                                 <div
                                     key={index}
-                                    className="border-b  border-gray-600 pb-4 transition-all duration-300 font-sans hover:border-[#FCCC31]"
+                                    className="border-b  border-gray-600 pb-4 transition-all duration-300 hover:border-[#FCCC31]"
                                 >
                                     <div
                                         className="flex justify-between items-center cursor-pointer transition-all duration-300 hover:text-[#FCCC31]"
                                         onClick={() => toggleQuestion(index)}
                                     >
-                                        <span className="md:text-[32px] md:mb-6 md:mt-6 text-left text-[1rem] font-semibold font-tthoves">
+                                        <span className="md:text-[24px] md:mb-6 md:mt-6 text-left text-[1rem] font-bold font-angrybirds tracking-wide">
                                             {faq.question}
                                         </span>
                                         <span className={`text-2xl transform transition-transform duration-600 ${openQuestion === index ? "rotate-180" : "rotate-0"}`}>
@@ -162,7 +156,8 @@ export default function FaqSection() {
                                         </span>
                                     </div>
                                     <div className={`overflow-hidden transition-all duration-600 transform ${openQuestion === index ? "max-h-96 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"}`}>
-                                        <div className="mt-2 text-left md:text-[1.5rem] text-gray-300 transition-opacity duration-300">
+                                        {/* --- UPDATED: Changed font to font-angrybirds --- */}
+                                        <div className="mt-2 text-left md:text-[1.2rem] text-gray-300 transition-opacity duration-300 font-angrybirds leading-relaxed tracking-wide">
                                             {faq.answer}
                                         </div>
                                     </div>
@@ -175,5 +170,3 @@ export default function FaqSection() {
         </div>
     );
 };
-
-

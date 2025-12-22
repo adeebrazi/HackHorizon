@@ -8,7 +8,7 @@ import SponsorSubHeading from '@/components/ui/SponsorsElements/SponsorsSubHeadi
 
 export default function Sponsors() {
   return (
-    <div id="sponsors-section" className="relative flex flex-col justify-between h-full overflow-hidden">
+    <div data-section="sponsors" id="sponsors-section" className="relative flex flex-col justify-between h-full overflow-hidden">
       {/* Sparks GIF background removed */}
       {/* Content above background */}
       <div className="relative pb-20  z-10">

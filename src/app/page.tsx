@@ -12,15 +12,26 @@ import ScrollBackToTopButton from "@/components/ui/scrollBackToTopButton";
 import { motion } from "motion/react";
 import Glimpse from "@/sections/Glimpse";
 import OrganizersSection from "@/sections/OrganizersSection";
-import Sponsors from "@/sections/SponsorsSection";
+// import Sponsors from "@/sections/SponsorsSection";
 
 // Lazy load below-the-fold sections
+const PrizePoolSection = dynamic(() => import("@/sections/prizePoolSection"), {
+  loading: () => <div className="min-h-screen" />,
+  ssr: false,
+});
+
+
+const CollaborationSection = dynamic(() => import("@/components/ui/CollaborationSection/CollaborationSection"), {
+  loading: () => <div className="min-h-[400px]" />,
+  ssr: false,
+});
+
 const TrackSection = dynamic(() => import("@/sections/TrackSection"), {
   loading: () => <div className="min-h-screen" />,
   ssr: false,
 });
 
-const TimelineSection = dynamic(() => import("@/sections/TimelineSection"), {
+const TimelineSection = dynamic(() => import("@/sections/timelineSection"), {
   loading: () => <div className="min-h-screen" />,
   ssr: false,
 });
@@ -83,6 +94,18 @@ export default function Home() {
       <div id="clock-section" data-section="clock">
         <ClockBannerSection />
       </div>
+
+      {/* --- Prize Pool --- */}
+      <div id="prizepool-section" data-section="prizepool">
+        <PrizePoolSection />
+      </div>
+
+    
+      <DividerNoArrow /> 
+      <div id="collaboration-section" data-section="collaboration">
+        <CollaborationSection />
+      </div>
+
       <Divider />
       <div id="track-section" data-section="tracks">
         <TrackSection />
@@ -100,9 +123,11 @@ export default function Home() {
         <OrganizersSection />
       </div>
       <DividerNoArrow />
-      <div className="sponsor-section" data-section="sponsors">
+
+      {/* <div className="sponsor-section" data-section="sponsors">
         <Sponsors />
-      </div>
+      </div> */}
+      
       <DividerNoArrow />
       <div id="wtsu-section" data-section="sponsorus">
         <WantToSponsorsUsSection />

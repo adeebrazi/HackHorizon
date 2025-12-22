@@ -133,7 +133,7 @@ export default function TrackSection() {
                     </div>
                 ))}
             </div>
-            <div className="h-[50vh]" />
+            <div className="h-[50vh]"  />
             <div className="absolute w-full z-0 bottom-0 h-[90vh] ">
                 <Image src={TrackBgImg} alt="background image" objectFit="cover" layout="fill" className="z-0" draggable={false}/>
                 <Image src={TrackBgImgUpper} alt="background image upper" objectFit="cover" layout="fill" className="z-10" draggable={false}/>

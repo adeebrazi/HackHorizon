@@ -35,6 +35,14 @@ const SECTION_CONFIG = {
     images: [7],
     description: "Join forces with us, mighty Sponsor!"
   },
+  collaboration: {
+    images: [7],
+    description: "Mighty allies unite! Our partners fuel this epic quest!"
+  },
+  organisers: {
+    images: [8],
+    description: "Meet the War Council - the brains behind this battle!"
+  },
   sponsorus: {
     images: [8],
     description: "Calling all mighty allies, power our event with your resources!"
