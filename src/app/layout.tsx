@@ -55,12 +55,7 @@ export default function RootLayout({
     <html lang="en" >
       <head>
         {/* Preload critical hero background image */}
-        <link
-          rel="preload"
-          href="/_next/static/media/background.webp"
-          as="image"
-          type="image/webp"
-        />
+        {/* Removed missing background.webp preload link */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}

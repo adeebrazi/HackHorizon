@@ -87,6 +87,7 @@ const OrganizerCard = ({ name, role, team, image, theme = "purple" }: OrganizerC
             alt={name}
             fill
             className="object-cover"
+            sizes="12rem"
           />
            <div className="absolute inset-0 border-2 border-white/10 rounded-2xl pointer-events-none"></div>
         </div>
@@ -145,7 +146,7 @@ export default function OrganizersSection() {
     { name: "Ritesh Kumar", role: "President", team: "Code & Compute Society", image: ritesh },
     { name: "Gourav Kr Pandey", role: "Vice-President", team: "Code & Compute Society", image: gourav },
     { name: "Anjali Singh", role: "Organiser", team: "GDG on Campus AJU", image: anjali },
-    { name: "Preet Kumar", role: "Technical Lead", team: "Code & Compute Society", image: preet },
+    { name: "Singh Preet", role: "Technical Lead", team: "Code & Compute Society", image: preet },
     { name: "Nikita Mishra", role: "PR Lead", team: "GDG on Campus AJU", image: nikita },
     { name: "Sonali Mahato", role: "Social Media Lead", team: "GDG on Campus AJU", image: sonali },
     { name: "Sohail Khan", role: "Creative Lead", team: "GDG on Campus AJU", image: sohail },

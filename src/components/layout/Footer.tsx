@@ -11,10 +11,11 @@ export default function Footer() {
       <Image
         src={FooterImg}
         alt="Footer Image"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: 'cover' }}
         className="z-0"
         draggable={false}
+        sizes="100vw"
       />
       <div className="flex flex-col items-center mx-auto z-10 text-white px-4 md:px-8">
         <div className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] mb-8 md:mb-12 lg:mb-18 text-center">

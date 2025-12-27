@@ -26,7 +26,7 @@ export default function ClockBannerSection() {
             <Cloud position=" top-[-40%] right-[-150px] md:right-[100px]" X={rightCloudX} />
 
             <div className="absolute left-0 right-0 z-0">
-                <Image src={PrizePoolClouds} alt="clouds background" objectFit="fill" className="w-screen h-full" draggable={false}/>
+                <Image src={PrizePoolClouds} alt="clouds background" style={{ objectFit: 'fill' }} className="w-screen h-full" draggable={false} sizes="100vw" />
             </div>
             <div className="w-fit  relative -top-8 md:-top-20 z-20" >
                 <CountdownTimerCard />
