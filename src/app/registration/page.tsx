@@ -183,7 +183,7 @@ export default function RegistrationForm() {
       
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(76,29,0,0.3),transparent_50%)]" />
-      {/* Removed missing noise.png background */}
+      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5" />
 
       {/* Barbarian Character with Speech Bubble */}
       {!success && !error && (
@@ -196,7 +196,7 @@ export default function RegistrationForm() {
           <div className="relative">
             {/* Barbarian Image */}
             <Image
-              src="/VillageBarbarian/barbarian4.webp"
+              src="/village-barbarian/barbarian4.webp"
               alt="Barbarian Guide"
               width={200}
               height={400}
@@ -386,7 +386,7 @@ export default function RegistrationForm() {
                       onChange={(e) => handleMemberCount(Number(e.target.value))}
                       className="w-full px-4 py-3 bg-[#0a0a0a] border-2 border-[#4C1D00] rounded-lg text-white focus:border-[#E8C068] focus:outline-none transition-all"
                     >
-                      {[4, 5].map((n) => (
+                      {[3, 4, 5].map((n) => (
                         <option key={n} value={n}>{n} Members</option>
                       ))}
                     </select>

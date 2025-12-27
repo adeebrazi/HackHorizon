@@ -52,14 +52,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
+    <html lang="en">
       <head>
-        {/* Preload critical hero background image */}
-        {/* Removed missing background.webp preload link */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+        {/* Removed preload for background.webp */}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}>
         <Snowfall />
         <LenisProvider>{children}</LenisProvider>
       </body>
