@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { google } from "googleapis";
-import fs from "fs";
-import path from "path";
 import { v2 as cloudinary } from "cloudinary";
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID || "<YOUR_SHEET_ID_HERE>";
@@ -14,9 +12,19 @@ cloudinary.config({
 });
 
 async function getAuth() {
-  const credentials = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "google-service-account.json"), "utf8")
-  );
+  // Build credentials object from individual environment variables
+  const credentials = {
+    type: "service_account",
+    project_id: process.env.GOOGLE_PROJECT_ID,
+    private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+    client_email: process.env.GOOGLE_CLIENT_EMAIL,
+  };
+  
+  // Validate that all required credentials are present
+  if (!credentials.project_id || !credentials.private_key || !credentials.client_email) {
+    throw new Error("Missing required Google service account credentials in environment variables");
+  }
+  
   return new google.auth.GoogleAuth({
     credentials,
     scopes: [
