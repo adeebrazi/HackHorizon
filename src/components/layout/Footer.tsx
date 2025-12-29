@@ -57,22 +57,27 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] mt-6 md:mt-8 lg:mt-10 mb-4 md:mb-5 text-center">
-          <div>Venue</div>
-          <div className="border-8 border-[#fbdd66] rounded-3xl">
-            <iframe
-              title="Venue Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58842.60725308107!2d86.09784817698247!3d22.814949605614032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e5f1b496777f%3A0x1d506033b3ed835d!2sEmversity%20Campus%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1766128633582!5m2!1sen!2sin"
-              width="400"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-2xl"
-            ></iframe>
-          </div>
-        </div>
+        <div className="w-full max-w-4xl mx-auto px-4 flex flex-col items-center">
+  {/* Responsive Title */}
+  <div className="text-xl sm:text-2xl md:text-3xl lg:text-[36px] mt-6 md:mt-8 lg:mt-10 mb-4 md:mb-5 text-center font-bold">
+    Venue
+  </div>
+
+  {/* Responsive Map Container */}
+  <div className="w-full border-4 md:border-8 border-[#fbdd66] rounded-3xl overflow-hidden">
+    <div className="relative w-full aspect-video sm:aspect-[21/9]">
+      <iframe
+        title="Venue Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58842.60725308107!2d86.09784817698247!3d22.814949605614032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e5f1b496777f%3A0x1d506033b3ed835d!2sEmversity%20Campus%2C%20Jamshedpur!5e0!3m2!1sen!2sin!4v1766128633582!5m2!1sen!2sin"
+        className="absolute top-0 left-0 w-full h-full rounded-2xl"
+        style={{ border: 0 }}
+        allowFullScreen={true}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>
       </div>
       <div className="w-full absolute bottom-0 px-4 sm:px-8 md:px-12 lg:px-20 py-3 md:py-4 border-t-2 border-[#FFFFFF1F] z-10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-2 bg-black/20 backdrop-blur-sm">
         <div className="text-white font-sans text-xs sm:text-sm md:text-base lg:text-xl text-center order-1 md:order-1">
@@ -102,7 +107,7 @@ export default function Footer() {
             <FaGithub className="hover:text-gray-300 transition-colors cursor-pointer" />
           </Link>
           <Link
-            href="https://www.linkedin.com/company/hack-horizon-aju/"
+            href="https://www.linkedin.com/in/hackhorizon-aju-50827a352/"
             target="_blank"
             rel="noopener noreferrer"
           >
