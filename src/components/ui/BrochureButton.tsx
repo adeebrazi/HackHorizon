@@ -5,7 +5,7 @@ export default function BrochureButton() {
 const handleClick = () => {
     ButtonSound();
     window.open(
-      "https://drive.google.com/file/d/13MyQpG63IETVxX2MhVKUk9NVjrJiS-MY/preview",
+      "https://drive.google.com/file/d/1Jql1F9hXSzMdNMPdn_pi4FFEkF-IYz1/preview",
       "_blank"
     );
 }
