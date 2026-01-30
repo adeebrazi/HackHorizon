@@ -46,6 +46,26 @@ export const metadata: Metadata = {
   // },
 };
 
+// export default function RootLayout({
+//   children,
+// }: Readonly<{
+//   children: React.ReactNode;
+// }>) {
+//   return (
+//     <html lang="en">
+//       <head>
+//         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+//         <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
+//         {/* Removed preload for background.webp */}
+//       </head>
+//       <body className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}>
+//         <Snowfall />
+//         <LenisProvider>{children}</LenisProvider>
+//       </body>
+//     </html>
+//   );
+// }
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,11 +74,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="alternate icon" href="/favicon.ico" type="image/x-icon" />
-        {/* Removed preload for background.webp */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}
+      >
         <Snowfall />
         <LenisProvider>{children}</LenisProvider>
       </body>
