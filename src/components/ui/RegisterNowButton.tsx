@@ -30,6 +30,7 @@
 // }
 
 import Image from "next/image";
+import applyWDBG from '@/assets/webp/ApplyWDBG.webp';
 import { useRouter } from "next/navigation";
 
 export default function RegisterNowButton() {
@@ -46,7 +47,7 @@ export default function RegisterNowButton() {
       style={{ background: 'none', border: 'none' }}
     >
       <Image
-        src="/images/hero/ApplyWDBG.webp"
+        src={applyWDBG}
         alt="Register Now Background"
         fill
         style={{ objectFit: "cover", borderRadius: "0.5rem", zIndex: 0 }}
