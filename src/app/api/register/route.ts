@@ -92,13 +92,7 @@ async function uploadToCloudinary(file: File): Promise<string> {
   // Upload to Cloudinary with optimizations for faster processing
   const result = await cloudinary.uploader.upload(base64, {
     folder: "hackhorizon-registrations",
-    resource_type: "auto",
-    quality: "auto:good", // Optimize quality vs size
-    format: "webp", // Convert to WebP for smaller file size
-    transformation: [
-      { width: 800, height: 600, crop: "limit" }, // Limit size for faster upload
-      { quality: "auto" }
-    ]
+    resource_type: "image",
   });
   
   return result.secure_url;
@@ -149,7 +143,7 @@ export async function POST(req: NextRequest) {
     // Run auth and cloudinary upload in parallel to save time
     const [auth, paymentScreenshotUrl] = await Promise.all([
       getAuth(),
-      paymentFile ? uploadToCloudinary(paymentFile) : Promise.resolve("")
+      paymentFile ? uploadToCloudinary(paymentFile).catch(err => { console.error("Upload failed:", err); return ""; }) : Promise.resolve("")
     ]);
     
     console.log("File upload completed");
@@ -200,20 +194,14 @@ export async function POST(req: NextRequest) {
     
     console.log("Attempting to write to Google Sheets...");
     
-    // Add timeout to Google Sheets operation
-    const sheetsWritePromise = sheets.spreadsheets.values.append({
+    await sheets.spreadsheets.values.append({
       spreadsheetId: SHEET_ID,
-      range: "Sheet1!A1",
-      valueInputOption: "USER_ENTERED",
+      range: "Sheet1",
+      valueInputOption: "RAW",
       insertDataOption: "INSERT_ROWS",
       requestBody: { values: [row] },
     });
 
-    const timeoutPromise = new Promise((_, reject) => {
-      setTimeout(() => reject(new Error('Google Sheets write timeout')), 15000); // 15 second timeout
-    });
-
-    await Promise.race([sheetsWritePromise, timeoutPromise]);
     console.log("Successfully wrote to Google Sheets");
     console.log("Registration data processed successfully");
     console.log("Registration details:", {
@@ -230,13 +218,14 @@ export async function POST(req: NextRequest) {
     }, {
       status: 200,
       headers: {
-        'Cache-Control': 'no-store, max-age=0', // Prevent caching of registration responses
+        'Cache-Control': 'no-store, max-age=0',
       }
     });
   } catch (error: any) {
     console.error("Registration error:", error);
     console.error("Error stack:", error.stack);
     console.error("Error message:", error?.message);
+    console.error("Error details:", error);
     
     // Return detailed error message for debugging
     return NextResponse.json(
