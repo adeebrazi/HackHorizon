@@ -195,7 +195,6 @@ const Chatbot = () => {
                 opacity: 1,
               }}
             />
-            <div className="absolute inset-0 z-1 bg-linear-to-b from-[#5d9e33]/90 to-[#3d6a22]/95 pointer-events-none" />
 
             <div className="relative z-30 p-3 bg-[#8b5a2b] border-b-4 border-[#4e3115] text-white flex justify-between items-center shadow-lg">
               <div className="flex items-center gap-2">
