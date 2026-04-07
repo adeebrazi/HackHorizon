@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function RegisterNowButton() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/registration/regclosepage");
+    router.push("/registration");
   };
   return (
     <button
