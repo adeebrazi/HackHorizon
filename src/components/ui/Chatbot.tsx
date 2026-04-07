@@ -110,6 +110,7 @@ const Chatbot = () => {
   ]);
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const scrollToBottom = () =>
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -117,8 +118,13 @@ const Chatbot = () => {
     scrollToBottom();
   }, [messages, loading]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const pathname = usePathname();
-  if (pathname === "/registration") return null;
+  if (pathname === "/registration" || !isLoaded) return null;
 
   const sendMessage = async () => {
     if (!input.trim() && !selectedFile) return;
