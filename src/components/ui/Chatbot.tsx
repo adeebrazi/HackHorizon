@@ -153,7 +153,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-25 z-9999 font-sans">
+    <div className="fixed bottom-6 right-25 z-45 font-sans">
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -172,7 +172,7 @@ const Chatbot = () => {
               className="w-24 h-24 object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
             />
             <span className="font-black italic text-[11px] text-white uppercase drop-shadow-[0_2px_2px_rgba(0,0,0,1)] -mt-2">
-              Horizon Bot
+              HORIZON BOT
             </span>
           </div>
         )}

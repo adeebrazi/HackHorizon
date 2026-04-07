@@ -1,17 +1,17 @@
 import Image from "next/image";
-import applyWDBG from '@/assets/webp/ApplyWDBG.webp';
+import applyWDBG from "@/assets/webp/ApplyWDBG.webp";
 import { useRouter } from "next/navigation";
 
 export default function RegisterNowButton() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("/registration");
+    router.push("/registration/regclosepage");
   };
   return (
     <button
       onClick={handleClick}
       className="relative flex items-center justify-center px-8 py-3 text-2xl font-bold text-yellow-900 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50"
-      style={{ background: 'none', border: 'none' }}
+      style={{ background: "none", border: "none" }}
     >
       <Image
         src={applyWDBG}
@@ -21,7 +21,10 @@ export default function RegisterNowButton() {
         className="absolute inset-0 w-full h-full pointer-events-none"
         draggable={false}
       />
-      <span className="relative z-10" style={{ color: '#7A4B00', textShadow: '0 2px 4px #fff' }}>
+      <span
+        className="relative z-10"
+        style={{ color: "#7A4B00", textShadow: "0 2px 4px #fff" }}
+      >
         Register now
       </span>
     </button>
