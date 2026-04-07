@@ -111,14 +111,14 @@ const Chatbot = () => {
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
 
-  const pathname = usePathname();
-  if (pathname === "/registration") return null;
-
   const scrollToBottom = () =>
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   useEffect(() => {
     scrollToBottom();
   }, [messages, loading]);
+
+  const pathname = usePathname();
+  if (pathname === "/registration") return null;
 
   const sendMessage = async () => {
     if (!input.trim() && !selectedFile) return;
@@ -172,7 +172,7 @@ const Chatbot = () => {
           <div className="flex flex-col items-center">
             <img
               src="/O.T.T.O_info.png"
-              alt="O.T.T.O"
+              alt="HackHorizon Bot"
               className="w-24 h-24 object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
             />
             <span className="font-black italic text-[11px] text-white uppercase drop-shadow-[0_2px_2px_rgba(0,0,0,1)] -mt-2">
@@ -214,10 +214,9 @@ const Chatbot = () => {
                 />
                 <div className="ml-1">
                   <h3 className="text-white font-black italic tracking-tighter text-sm sm:text-base leading-none drop-shadow-[0_2px_0_rgba(0,0,0,1)]">
-                    HORIZON BOT
+                    
                   </h3>
                   <p className="text-[9px] uppercase font-black text-yellow-400 tracking-widest drop-shadow-sm">
-                    O.T.T.O Unit Online
                   </p>
                 </div>
               </div>
