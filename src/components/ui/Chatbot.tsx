@@ -5,6 +5,7 @@ import axios from "axios";
 import { X, Send, Paperclip, Maximize2, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
+import { usePathname } from "next/navigation";
 
 // --- TYPES FOR TYPESCRIPT ---
 interface Message {
@@ -109,6 +110,9 @@ const Chatbot = () => {
   ]);
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+
+  const pathname = usePathname();
+  if (pathname === "/registration") return null;
 
   const scrollToBottom = () =>
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
