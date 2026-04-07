@@ -5,10 +5,13 @@ import Audio from "@/components/ui/Audio";
 
 export default function RegistrationForm() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden flex flex-col items-center justify-center" suppressHydrationWarning>
+    <div
+      className="min-h-screen bg-[#0a0a0a] relative overflow-hidden flex flex-col items-center justify-center"
+      suppressHydrationWarning
+    >
       {/* Audio Component */}
       <Audio />
-      
+
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(76,29,0,0.3),transparent_50%)]" />
 
@@ -27,9 +30,13 @@ export default function RegistrationForm() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="mb-6"
           >
-            <svg className="w-24 h-24 md:w-32 md:h-32 mx-auto text-[#FFD700] drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 1C6.48 1 2 5.48 2 11v10c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V11c0-5.52-4.48-10-10-10zm0 2c4.41 0 8 3.59 8 8v2H4v-2c0-4.41 3.59-8 8-8zm-4 12h8v4H8z"/>
-              <path d="M13 17h-2v2h2z"/>
+            <svg
+              className="w-24 h-24 md:w-32 md:h-32 mx-auto text-[#FFD700] drop-shadow-lg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 1C6.48 1 2 5.48 2 11v10c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V11c0-5.52-4.48-10-10-10zm0 2c4.41 0 8 3.59 8 8v2H4v-2c0-4.41 3.59-8 8-8zm-4 12h8v4H8z" />
+              <path d="M13 17h-2v2h2z" />
             </svg>
           </motion.div>
 
@@ -40,7 +47,8 @@ export default function RegistrationForm() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#E8C068] mb-4"
             style={{
-              textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(232,192,104,0.3)",
+              textShadow:
+                "2px 2px 4px rgba(0,0,0,0.8), 0 0 20px rgba(232,192,104,0.3)",
             }}
           >
             REGISTRATION CLOSED
@@ -53,7 +61,9 @@ export default function RegistrationForm() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed"
           >
-            The registration for <span className="text-[#FFD700] font-bold">HackHorizon 2.0</span> has been closed.
+            The registration for{" "}
+            <span className="text-[#FFD700] font-bold">HackHorizon 2.0</span>{" "}
+            has been closed.
           </motion.p>
 
           <motion.p
@@ -84,4 +94,3 @@ export default function RegistrationForm() {
     </div>
   );
 }
-
