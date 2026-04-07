@@ -213,11 +213,8 @@ const Chatbot = () => {
                   className="h-8 w-8 rounded-full border border-yellow-400 shadow-md"
                 />
                 <div className="ml-1">
-                  <h3 className="text-white font-black italic tracking-tighter text-sm sm:text-base leading-none drop-shadow-[0_2px_0_rgba(0,0,0,1)]">
-                    
-                  </h3>
-                  <p className="text-[9px] uppercase font-black text-yellow-400 tracking-widest drop-shadow-sm">
-                  </p>
+                  <h3 className="text-white font-black italic tracking-tighter text-sm sm:text-base leading-none drop-shadow-[0_2px_0_rgba(0,0,0,1)]"></h3>
+                  <p className="text-[9px] uppercase font-black text-yellow-400 tracking-widest drop-shadow-sm"></p>
                 </div>
               </div>
               {/* <button onClick={() => setIsFull(!isFull)} className="bg-[#4e3115] p-2 rounded-xl active:scale-95 transition"><Maximize2 size={16}/></button> */}
