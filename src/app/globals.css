@@ -40,6 +40,31 @@ body {
   scrollbar-color: #4C1D00 #1a1206;
 }
 
+/* Chatbot messages scrollbar */
+.chatbot-scroller::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+}
+
+.chatbot-scroller::-webkit-scrollbar-track {
+  background: rgba(45, 27, 13, 0.5);
+  border-radius: 4px;
+}
+
+.chatbot-scroller::-webkit-scrollbar-thumb {
+  background: #8b5a2b;
+  border-radius: 4px;
+}
+
+.chatbot-scroller::-webkit-scrollbar-thumb:hover {
+  background: #b8860b;
+}
+
+.chatbot-scroller {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5a2b rgba(45, 27, 13, 0.5);
+}
+
 
 @layer utilities {
   .text-3d {

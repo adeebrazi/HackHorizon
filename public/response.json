@@ -1,0 +1,70 @@
+{
+  "event_overview": {
+    "keywords": ["event","hackathon","horizon","venue","date"],
+    "answer": "Hack Horizon 2.0 is a national-level 24-hour hackathon where innovation meets reality. It is scheduled for the 10th and 11th of April 2026 at the ARKA JAIN University."
+  },
+  "organizers_and_partners": {
+    "keywords": ["organizers","collaboration","partners","sponsors","association"],
+    "answer": "The organizing committee and official partners for the event are structured as follows:\n\n- **Organizer:** School of Engineering & IT, ARKA JAIN University\n- **In Collaboration With:** IBM and Google Developer Groups (GDG) On Campus AJU\n- **In Association With:** Code & Compute Society, IT Club, and IIC."
+  },
+  "past_success_2025": {
+    "keywords": ["past","2025","previous","history","winners"],
+    "answer": "Hack Horizon 2025 featured 450+ participants and 117 teams. The top winning teams were:\n- Team Helix (1st Prize)\n- Team GitCoders (2nd Prize)\n- Team B. Bros (3rd Prize)"
+  },
+  "eligibility": {
+    "keywords": ["eligibility","who can participate","team size","requirements"],
+    "answer":"Here are the eligibility and participation criteria:\n\n• The hackathon is open to anyone currently enrolled in a recognizable educational institution.\n• Participants must register as a team of 3 to 5 members.\n• Each participant can only be part of one team."
+  },
+  "rules_and_regulations": {
+    "keywords": ["rules","regulations","guidelines","code of conduct"],
+    "answer": "The rules for the hackathon are as follows:\n- Teams must have a unique name and a team leader.\n- Participants must bring valid ID, their own laptops, and create a new GitHub repo for their project.\n- Code must be pushed at intervals, and solutions must be original.\n- Participants cannot leave campus until the closing ceremony, and must maintain backups.\n- Late submissions are not evaluated."
+  },
+  "registration": {
+    "keywords": ["register","fee","cost","deadline","payment","process"],
+    "answer": "The registration details are as follows:\n- **Fee:** Rs. 800 per team\n- **Deadline:** March 25, 2026\n- **Payment Instructions:** The team leader must make a single UPI payment for the entire team and ensure 'Hack Horizon 2026' is mentioned in the transaction message."
+  },
+  "themes": {
+    "keywords": ["themes","topics","domains","categories","tracks"],
+    "answer": "The official themes for Hack Horizon 2.0 are:\n\n• Agriculture & Food\n• Governance & Civic Tech\n• Cities & Infrastructure\n• Community & Social Impact\n• Health & Wellness\n• Environment & Sustainability"
+  },
+  "timeline": {
+    "keywords": ["timeline","schedule","time","when"],
+    "answer": "The official event scheduled is organised as follows:\n\n**Day 1 (April 10, 2026)**\n• 09:00 AM: Participant Reporting\n• 10:00 AM: Inaugural Session\n• 11:00 AM: Hackathon Commencement\n\n**Day 2 (April 11, 2026)**\n• 10:00 AM - 11:00 AM: Project Submissions & Presentations\n• 11:00 AM: Hackathon Conclusion\n• 11:00 AM - 11:45 AM: Closing Ceremony"
+  },
+  "prize_pool": {
+    "keywords": ["prize","winning","reward","money","pool"],
+    "answer": "There is a total prize pool worth of Rs 50,000."
+  },
+  "facilities": {
+    "keywords": ["facilities","accommodation","food","internet","stay","meals"],
+    "answer": "Guests are kindly requested to note the following provisions regarding the upcoming schedule:\n\n• Guest house accommodations on April 9th are reserved solely for the 40 out-of-state participants.\n• Complimentary accommodations will be provided for all in-state participants on April 10th.\n• On April 10th, comprehensive meal services will be provided for all attendees, accompanied by a scheduled fun event.\n• On April 11th, catering provisions will consist of breakfast and lunch only.\n• High-speed internet access will remain available to all participants throughout the duration of the event."
+  },
+  "sponsorship_tiers": {
+    "keywords": ["sponsor","sponsorship","packages","partnership","tiers","perks"],
+    "answer": "Sponsorship offers brand visibility and engagement.\n Packages include:\n Diamond Sponsor (Rs 1,00,000+) with keynotes and social media mentions\n Gold Sponsor (Rs 50,000+) with banners and print ads\nand Silver Sponsor (Rs 20,000+) with poster ads"
+  },
+  "contact_info": {
+    "keywords": ["contact", "email", "phone", "help", "queries", "coordinators", "conveners", "management"],
+    "answer": "For any inquiries or further assistance, please email hackhorizon@arkajainuniversity.ac.in or reach out to our designated team members:\n\n• Student Coordinator: Anjali Singh (+91 62051 20426)\n• Faculty Convener: Prof. Mamatha V (+91 78588 12586)"
+  },
+  "problem_statements": {
+    "keywords": ["problem", "problem statement", "ps", "questions"],
+    "answer": "The problem statements will be officially disclosed on the day of the event."
+  },
+  "certificate": {
+    "keywords": ["certificate", "certificates", "participation"],
+    "answer": "A Certificate of Participation will be awarded to all attendees, while top-performing teams will be presented with distinctive Winner Certificates."
+  },
+  "chatbot_creators": {
+    "keywords": ["chatbot", "creators", "developers", "team", "creator"],
+    "answer": "The Hack Horizon 2.0 chatbot was officially developed by the following individuals:\n\n• Adeeb Razi (Organiser, CCS)\n\n• Samia Sayeed (Member, CCS)"
+  },
+  "judges": {
+    "keywords": ["judges", "panel", "evaluation", "criteria"],
+    "answer": "The judges will be revealed on 11th April 2026 during the presentation."
+  },
+  "Mentor": {
+    "keywords": ["mentor", "mentors", "guidance", "support"],
+    "answer": "The mentors for Hack Horizon 2.0 will be announced on the day of the event(10th April 2026) to provide guidance and support to the participants throughout the hackathon."
+  }
+}

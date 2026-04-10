@@ -1,0 +1,77 @@
+{
+  "themes": {
+    "keywords": [
+      "themes",
+      "topics",
+      "domains",
+      "categories",
+      "tracks"
+    ],
+    "answer": "The official themes for Hack Horizon 2.0 are:\n\n• Agriculture & Food\n• Governance & Civic Tech\n• Cities & Infrastructure\n• Community & Social Impact\n• Health & Wellness\n• Environment & Sustainability"
+  },
+  "agriculture_and_food": {
+    "keywords": [
+      "agriculture",
+      "food",
+      "agritech",
+      "farming",
+      "crops",
+      "agriculture problem statements"
+    ],
+    "answer": "Here are the problem statements for Agriculture & Food:\n\n1. Develop an AI-driven crop disease prediction tool using smartphone cameras.\n2. Create a supply chain transparency platform to ensure fair trade and direct farmer compensation.\n3. Build an IoT-based smart irrigation system to analyze soil moisture and minimize water wastage.\n4. Design a digital marketplace connecting local farmers directly with consumers to reduce food miles.\n5. Develop a localized food waste management and redistribution system for restaurants and grocery stores."
+  },
+  "governance_and_civic_tech": {
+    "keywords": [
+      "governance",
+      "civic tech",
+      "government",
+      "policy",
+      "civic problem statements"
+    ],
+    "answer": "Here are the problem statements for Governance & Civic Tech:\n\n1. Create a secure, blockchain-based transparent voting or polling system for local communities.\n2. Develop an AI-powered multilingual chatbot to help citizens navigate and apply for government schemes.\n3. Build a crowdsourced civic issue reporting app (e.g., potholes, broken streetlights) with automated authority routing.\n4. Design an open-data dashboard for tracking municipal budget allocation and expenditure in real-time.\n5. Create an automated document verification and KYC system to fast-track citizen services."
+  },
+  "cities_and_infrastructure": {
+    "keywords": [
+      "cities",
+      "infrastructure",
+      "smart city",
+      "urban",
+      "transportation",
+      "infrastructure problem statements"
+    ],
+    "answer": "Here are the problem statements for Cities & Infrastructure:\n\n1. Build a smart traffic management system that dynamically adjusts signals to prioritize emergency vehicles.\n2. Develop a real-time public transit tracking and crowd-density prediction application.\n3. Create an IoT sensor network for monitoring the structural health and safety of aging bridges and buildings.\n4. Design an automated smart parking ecosystem to direct drivers to available spots and reduce urban congestion.\n5. Develop an energy-efficient smart street lighting system controlled by ambient light, weather, and motion."
+  },
+  "community_and_social_impact": {
+    "keywords": [
+      "community",
+      "social impact",
+      "ngo",
+      "social good",
+      "society",
+      "impact problem statements"
+    ],
+    "answer": "Here are the problem statements for Community & Social Impact:\n\n1. Develop a skill-matching platform that seamlessly connects digital volunteers with local NGOs.\n2. Create an accessible, adaptive digital education platform tailored specifically for neurodivergent students.\n3. Build a hyper-local crowdfunding aggregator for funding neighborhood-level community development projects.\n4. Design a crisis response app providing verified emergency resources, offline maps, and safe havens during natural disasters.\n5. Develop a digital cooperative marketplace empowering marginalized artisans to sell their crafts globally without middlemen."
+  },
+  "health_and_wellness": {
+    "keywords": [
+      "health",
+      "wellness",
+      "healthcare",
+      "medical",
+      "fitness",
+      "health problem statements"
+    ],
+    "answer": "Here are the problem statements for Health & Wellness:\n\n1. Create a low-bandwidth telemedicine platform tailored for remote and rural areas.\n2. Develop a gamified mental health application focused on reducing anxiety and promoting daily mindfulness in teenagers.\n3. Build a centralized digital health record system with secure, patient-controlled access via QR codes.\n4. Design a smart pill dispenser integrated with an app for automated medication reminders and caregiver alerts.\n5. Develop a computer vision tool that assists in the early detection of skin anomalies and accessible preliminary screening."
+  },
+  "environment_and_sustainability": {
+    "keywords": [
+      "environment",
+      "sustainability",
+      "climate",
+      "green",
+      "ecology",
+      "environment problem statements"
+    ],
+    "answer": "Here are the problem statements for Environment & Sustainability:\n\n1. Develop an application that tracks, analyzes, and gamifies an individual's or household's carbon footprint reduction.\n2. Create a machine learning model for early wildfire or deforestation detection using open-source satellite imagery.\n3. Build a computer vision-powered automated recycling sorting assistant for consumers to reduce contamination.\n4. Design a peer-to-peer renewable energy trading platform allowing solar panel owners to share excess power locally.\n5. Develop an affordable, deployable IoT sensor network for real-time monitoring of local water body pollution levels."
+  }
+}

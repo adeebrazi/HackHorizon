@@ -7,8 +7,7 @@ import "./globals.css";
 import LenisProvider from "@/utils/LenisProvider";
 import Snowfall from "@/components/ui/HeroSectionElement/Snowfall";
 // 🤖 Step 1: Import the O.T.T.O Unit
-import Chatbot from "@/components/ui/Chatbot";
-// import HorizonBotAnimation from "@/sections/HorizonBotAnimation";
+import Chatbot from "@/components/ui/Chatbot"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +27,12 @@ const clashClan = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-clashclan",
+  variable: "--font-clashclan", 
 });
 
 export const metadata: Metadata = {
   title: "Hack Horizon 2.0 | Where Innovation Meets Reality",
-  description:
-    "A 24-hour hackathon by School of Engineering & IT, ARKA JAIN University × GDG On Campus AJU | Feb 16-17, 2026",
+  description: "A 24-hour hackathon by School of Engineering & IT, ARKA JAIN University × GDG On Campus AJU | Feb 16-17, 2026",
 };
 
 export default function RootLayout({
@@ -51,13 +49,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${clashClan.variable} antialiased`}
       >
         <Snowfall />
-        <LenisProvider>{children}</LenisProvider>
+        <LenisProvider>
+          {children}
+        </LenisProvider>
 
         {/* 🤖 Step 2: Drop O.T.T.O Unit at the bottom of the body */}
         <Chatbot />
-
-        {/* 🤖 Horizon Bot Animation on the right side */}
-        {/* <HorizonBotAnimation /> */}
       </body>
     </html>
   );

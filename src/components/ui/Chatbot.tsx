@@ -126,6 +126,45 @@ const Chatbot = () => {
   const pathname = usePathname();
   if (pathname === "/registration" || !isLoaded) return null;
 
+  const searchKnowledgeBase = async (query: string): Promise<string | null> => {
+    try {
+      // Fetch both JSON files
+      const responseData = await fetch("/response.json").then((res) =>
+        res.json(),
+      );
+      const problemStatementData = await fetch("/problem_statement.json").then(
+        (res) => res.json(),
+      );
+
+      // Combine all data
+      const allData = { ...responseData, ...problemStatementData };
+      const queryLower = query.toLowerCase();
+
+      // Search through keywords
+      for (const [key, content] of Object.entries(allData)) {
+        if (
+          typeof content === "object" &&
+          content !== null &&
+          "keywords" in content
+        ) {
+          const section = content as { keywords: string[]; answer: string };
+          const matches = section.keywords.filter((keyword: string) =>
+            queryLower.includes(keyword.toLowerCase()),
+          );
+
+          if (matches.length > 0) {
+            return section.answer;
+          }
+        }
+      }
+
+      return null;
+    } catch (err) {
+      console.error("Knowledge base search error:", err);
+      return null;
+    }
+  };
+
   const sendMessage = async () => {
     if (!input.trim() && !selectedFile) return;
     const displayMsg = selectedFile
@@ -141,17 +180,25 @@ const Chatbot = () => {
     setLoading(true);
 
     try {
-      const formData = new FormData();
-      formData.append("message", currentInput);
-      formData.append("teamCode", userData.teamCode);
-      formData.append("email", userData.email);
-      if (fileToSend) formData.append("file", fileToSend);
+      // First, try to find answer in knowledge base
+      const kbAnswer = await searchKnowledgeBase(currentInput);
 
-      const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_CHAT_API}/api/chat`,
-        formData,
-      );
-      setMessages((prev) => [...prev, { role: "bot", text: data.reply }]);
+      if (kbAnswer) {
+        setMessages((prev) => [...prev, { role: "bot", text: kbAnswer }]);
+      } else {
+        // If not found in KB, use the API
+        const formData = new FormData();
+        formData.append("message", currentInput);
+        formData.append("teamCode", userData.teamCode);
+        formData.append("email", userData.email);
+        if (fileToSend) formData.append("file", fileToSend);
+
+        const { data } = await axios.post(
+          `${process.env.NEXT_PUBLIC_CHAT_API}/api/chat`,
+          formData,
+        );
+        setMessages((prev) => [...prev, { role: "bot", text: data.reply }]);
+      }
     } catch (err) {
       setMessages((prev) => [
         ...prev,
@@ -163,7 +210,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-25 z-45 font-sans">
+    <div className="fixed bottom-6 right-25 z-9999 font-sans">
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -182,7 +229,7 @@ const Chatbot = () => {
               className="w-24 h-24 object-contain drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
             />
             <span className="font-black italic text-[11px] text-white uppercase drop-shadow-[0_2px_2px_rgba(0,0,0,1)] -mt-2">
-              HORIZON BOT
+              Horizon Bot
             </span>
           </div>
         )}
@@ -226,7 +273,9 @@ const Chatbot = () => {
               {/* <button onClick={() => setIsFull(!isFull)} className="bg-[#4e3115] p-2 rounded-xl active:scale-95 transition"><Maximize2 size={16}/></button> */}
             </div>
 
-            <div className="relative z-20 flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
+            <div 
+              className="relative z-20 flex-1 min-h-0 overflow-y-auto p-4 space-y-4 chatbot-scroller"
+            >
               {step === 1 ? (
                 <form
                   onSubmit={(e) => {
