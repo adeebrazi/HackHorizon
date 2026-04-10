@@ -241,7 +241,7 @@ const Chatbot = () => {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className={`absolute bottom-32 right-0 border-[6px] border-[#4e3115] shadow-2xl rounded-2xl overflow-hidden flex flex-col min-h-0 transition-all duration-300 ${isFull ? "w-[90vw] h-[85vh]" : "w-80 sm:w-96 h-[34rem]"}`}
+            className={`absolute bottom-32 right-0 border-[6px] border-[#4e3115] shadow-2xl rounded-2xl overflow-hidden flex flex-col min-h-0 transition-all duration-300 overscroll-contain ${isFull ? "w-[90vw] h-[85vh]" : "w-80 sm:w-96 h-[34rem]"}`}
           >
             <div
               className="absolute inset-0 z-0"
