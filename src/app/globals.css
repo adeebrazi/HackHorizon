@@ -63,6 +63,7 @@ body {
 .chatbot-scroller {
   scrollbar-width: thin;
   scrollbar-color: #8b5a2b rgba(45, 27, 13, 0.5);
+  overscroll-behavior: contain;
 }
 
 
